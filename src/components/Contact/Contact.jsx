@@ -3,7 +3,6 @@ import React, { useRef } from 'react';
 import Swal from 'sweetalert2';
 import emailjs from '@emailjs/browser'
 import { FaTelegramPlane } from 'react-icons/fa';
-import Lottie from 'react-lottie';
 import contact from '../../../public/Gallery/contact.json'
 
 const Contact = () => {
@@ -27,20 +26,13 @@ const Contact = () => {
 
 
 
-    const defaultOptions = {
-        loop: true,
-        autoplay: true, 
-        animationData: contact,
-        rendererSettings: {
-          preserveAspectRatio: 'xMidYMid slice'
-        }
-    }
+    
     return (
        <div className='my-10'>
         <div ><h1 className="text-center text-5xl font-serif text-gray-600 mb-5">Contact Us</h1></div>
          <div className='lg:flex gap-20 justify-center items-center'>
             <div className='lg:w-[500px] w-96 h-96 lg:h-[500px] rounded-xl'>
-            <Lottie  options={defaultOptions}/>
+            
             </div>
          <div className='ms-10 lg:ms-0'>
   <form className='w-96 justify-center mt-3' ref={form} onSubmit={sendEmail}>
