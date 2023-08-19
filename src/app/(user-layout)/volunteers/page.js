@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Swal from "sweetalert2";
 import teamWork from "../../../../public/groupImage.gif"
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const imgToken = process.env.NEXT_PUBLIC_IMGBB_API_Token;
@@ -10,7 +11,7 @@ const Volunteers = () => {
     const img_hosting_URl = `https://api.imgbb.com/1/upload?key=${imgToken}`
 
 
-    const handleVolunteers = event => {
+    const handleVolunteers = async event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
@@ -23,27 +24,36 @@ const Volunteers = () => {
         const formData = new FormData();
         formData.append('image', form.imageURL.files[0]);
 
-        fetch(img_hosting_URl, {
+        const imgRes = await fetch(img_hosting_URl, {
             method: "POST",
             body: formData
         })
-            .then(res => res.json())
-            .then(imageResponse => {
-                if (imageResponse.success) {
-                    const imageURL = imageResponse.data.display_url;
-                    const volunteerData = {
-                        name,
-                        email,
-                        designation,
-                        imageURL,
-                        bloodGroup,
-                        phoneNumber: parseInt(phoneNumber),
-                        workPlace
-                    };
-                    console.log({ volunteerData }) 
-                    
-                }
-            })
+        const imageResponse = await imgRes.json();
+
+        if (imageResponse.success) {
+            const imageURL = imageResponse.data.display_url;
+            const volunteerData = {
+                name,
+                email,
+                designation,
+                imageURL,
+                bloodGroup,
+                phoneNumber: parseInt(phoneNumber),
+                workPlace
+            };
+            console.log({ volunteerData })
+            let result = await fetch("http://localhost:3000/api/volunteerses", {
+                method: "POST",
+                body: JSON.stringify(volunteerData)
+            });
+            result = await result.json();
+            if (result.success) {
+                toast.success('Successfully Added!')
+            }
+
+        }
+
+
     };
 
 
@@ -98,7 +108,7 @@ const Volunteers = () => {
                 </div>
                 <h2 className="text-center md:text-end lg:text-end md:text-xs lg:text-xs md:mx-10 lg:mx-10 my-5 text-green-300">(*Please Wait some moment to upload the image)</h2>
             </div>
-
+            <Toaster />
         </div>
     );
 };

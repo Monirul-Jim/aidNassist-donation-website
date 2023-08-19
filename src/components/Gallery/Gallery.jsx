@@ -18,14 +18,14 @@ const Gallery = () => {
                 <div className="container mx-auto">
                     <h2 className="text-3xl font-semibold text-center mb-8">Our Gallery</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                        <Image width="500" height={300} src={ImageOne} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300"/>
-                        <Image width="500" height={300} src={ImageTwo} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300"/>
-                        <Image width="500" height={300} src={ImageThree} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300"/>
-                        <Image width="500" height={300} src={ImageFour} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300"/>
-                        <Image width="500" height={300} src={ImageFive} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300"/>
-                        <Image width="500" height={300} src={ImageSix} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300"/>
-                        <Image width="500" height={300} src={ImageSeven} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300"/>
-                        <Image width="500" height={300} src={ImageEight} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300"/>
+                        <Image width="500" height={300} src={ImageOne} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300" alt="Nothing"/>
+                        <Image width="500" height={300} src={ImageTwo} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300" alt="Nothing"/>
+                        <Image width="500" height={300} src={ImageThree} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300" alt="Nothing"/>
+                        <Image width="500" height={300} src={ImageFour} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300" alt="Nothing"/>
+                        <Image width="500" height={300} src={ImageFive} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300" alt="Nothing"/>
+                        <Image width="500" height={300} src={ImageSix} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300" alt="Nothing"/>
+                        <Image width="500" height={300} src={ImageSeven} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300" alt="Nothing"/>
+                        <Image width="500" height={300} src={ImageEight} className="w-full hover:-translate-y-2 hover:-translate-x-2 border-8 border-transparent hover:border-r-rose-500 hover:border-b-rose-500 duration-300" alt="Nothing"/>
                     </div>
                 </div>
             </section>
