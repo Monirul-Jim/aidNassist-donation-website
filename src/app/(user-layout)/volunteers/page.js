@@ -42,7 +42,7 @@ const Volunteers = () => {
                 workPlace
             };
             console.log({ volunteerData })
-            let result = await fetch("http://localhost:3000/api/volunteerses", {
+            let result = await fetch("/api/volunteerses", {
                 method: "POST",
                 body: JSON.stringify(volunteerData)
             });

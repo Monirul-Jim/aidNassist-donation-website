@@ -1,9 +1,10 @@
-import { getVolunteers } from "@/data/getVolunteers";
+
+import getVolunteersFromDB from "@/data/getVolunteersFromDB";
 import One_Volunteer from "./One_Volunteer";
 
 
 const All_Volunteers = async () => {
-    const volunteers = await getVolunteers();
+    const volunteers = await getVolunteersFromDB();
     return (
         <div className="font-serif my-10">
             <h2 className="text-3xl text-center"> All Volunteers</h2>
