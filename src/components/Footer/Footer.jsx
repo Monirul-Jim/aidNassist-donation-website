@@ -5,13 +5,11 @@ import { BsEnvelopeHeart } from "react-icons/bs";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { RiMapPinRangeFill } from "react-icons/ri";
 
-
 const Footer = () => {
 	return (
 		<section>
-			
-			<footer className="bg-green-100 pt-10 dark:bg-gray-900">
-				<div className="mx-auto w-[95%] max-w-screen-xl">
+			<footer className="bg-blue-900 pt-10 dark:bg-gray-900 text-white">
+				<div className="mx-auto w-[95%] max-w-screen-xl text-white">
 					<div className="grid grid-cols-1 gap-4 px-4 py-6 md:py-8 md:grid-cols-4">
 						<div>
 							<div className="flex items-center align-middle gap-2 mb-3">
@@ -27,7 +25,7 @@ const Footer = () => {
 									assist
 								</h1>
 							</div>
-							<p className="text-gray-500 leading-7 dark:text-gray-400 font-medium w-[90%]">
+							<p className="text-white leading-7 dark:text-gray-400 font-medium w-[90%]">
 								Create a visually appealing and user-friendly
 								design that resonates with your charitys
 								branding. Use a color scheme that represents
@@ -35,10 +33,10 @@ const Footer = () => {
 							</p>
 						</div>
 						<div>
-							<h2 className="mb-6 font-black text-gray-900 uppercase dark:text-white">
+							<h2 className="mb-6 font-black text-white uppercase dark:text-white">
 								Quick Links
 							</h2>
-							<ul className="text-gray-500 dark:text-gray-400 font-medium">
+							<ul className="text-white dark:text-gray-400 font-medium">
 								<li className="mb-4">
 									<a href="#" className="hover:underline">
 										Home
@@ -46,7 +44,7 @@ const Footer = () => {
 								</li>
 								<li className="mb-4">
 									<a href="#" className="hover:underline">
-										About Us..
+										About Us
 									</a>
 								</li>
 								<li className="mb-4">
@@ -55,7 +53,10 @@ const Footer = () => {
 									</a>
 								</li>
 								<li className="mb-4">
-									<a href="#" className="hover:underline">
+									<a
+										href="#"
+										className="text-white hover:underline"
+									>
 										Gallery
 									</a>
 								</li>
@@ -67,10 +68,10 @@ const Footer = () => {
 							</ul>
 						</div>
 						<div>
-							<h2 className="mb-6 font-black text-gray-900 uppercase dark:text-white">
+							<h2 className="mb-6 font-black text-white uppercase dark:text-white">
 								Contact Us
 							</h2>
-							<ul className="text-gray-500 dark:text-gray-400 font-medium">
+							<ul className="text-white dark:text-gray-400 font-medium">
 								<li className="mb-2 flex gap-2">
 									<MdOutlinePhoneInTalk className="text-emerald-600 text-2xl" />
 
@@ -94,15 +95,14 @@ const Footer = () => {
 							</ul>
 						</div>
 						<div>
-							<h2 className="mb-6 font-black text-gray-900 uppercase dark:text-white">
+							<h2 className="mb-6 font-black text-white uppercase dark:text-white">
 								Our Newsletter
 							</h2>
-							<p className="text-gray-500 leading-7 dark:text-gray-400 font-medium">
+							<p className="text-white leading-7 dark:text-gray-400 font-medium">
 								Creating a charity donation website requires
 								thoughtful planning, design, and technical
 								implementation.
 							</p>
-
 							<form>
 								<div className="my-3">
 									<input
@@ -124,8 +124,8 @@ const Footer = () => {
 						</div>
 					</div>
 					<hr className="border-emerald-400 sm:mx-auto dark:border-gray-700 lg:my-1" />
-					<div className="px-4 py-6 bg-green-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
-						<span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
+					<div className="px-4 py-6 bg-blue-900 dark:bg-gray-700 md:flex md:items-center md:justify-between">
+						<span className="text-sm text-white dark:text-gray-300 sm:text-center">
 							© 2023{" "}
 							<a href="https://flowbite.com/">Aid&Assist</a>. All
 							Rights Reserved.

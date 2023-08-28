@@ -1,0 +1,10 @@
+.active-link {
+	color: limegreen;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.inactive-link {
+	color: darkorange;
+	font-size: 1.5rem;
+}
