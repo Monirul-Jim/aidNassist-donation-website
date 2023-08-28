@@ -1,14 +1,17 @@
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
-import Image from "next/image";
-import React from "react";
+import Providers from "@/providers";
+import { Toaster } from "react-hot-toast";
 
 const UserLayout = ({ children }) => {
 	return (
 		<div>
-			<Navbar />
-			{children}
-			<Footer />
+			<Providers>
+				<Navbar />
+				{children}
+				<Footer />
+			</Providers>
+			<Toaster />
 		</div>
 	);
 };

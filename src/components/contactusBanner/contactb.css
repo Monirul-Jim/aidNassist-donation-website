@@ -1,0 +1,14 @@
+.bannersetup {
+    background-image: url('../../../public/Gallery/Contactustwo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    
+}
+
+@media (max-width: 767px) {
+    .bannersetup  {
+        background-size: cover; 
+        background-position:center;
+    }
+}

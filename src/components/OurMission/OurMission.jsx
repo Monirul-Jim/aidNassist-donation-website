@@ -1,11 +1,15 @@
 const OurMission = () => {
 	return (
-		<div>
-			<div>
-				<h1 className="text-center text-5xl font-serif text-gray-600 lg:max-w-4xl mx-auto">
+		<section className="mb-16">
+			<div className="">
+				<h1 className="text-center lg:max-w-4xl mx-auto text-4xl font-bold mb-8">
 					Welcome to AidNAssist, a nationwide charitable, non-profit
 					organization
 				</h1>
+				{/* <p className="text-center lg:max-w-2xl mx-auto text-xl mb-8">
+					We believe in the power of collective effort and community
+					involvement.
+				</p> */}
 			</div>
 			<div>
 				<div className="flex flex-col lg:flex-row gap-10 justify-center items-center mt-10">
@@ -29,10 +33,10 @@ const OurMission = () => {
 					{/* card 1 End */}
 
 					{/* card 2 start */}
-					<div className="relative w-[370px] h-[370px] m-2 bg-orange-400 rounded-lg font-serif">
-						<div className="absolute inset-0  rounded-lg transition-transform transform bg-orange-300 hover:-translate-x-3 hover:-translate-y-3 p-10">
-							<div className="rounded-full w-24 h-24 bg-orange-400">
-								<h1 className=" text-center text-6xl text-orange-300 translate-y-6">
+					<div className="relative w-[370px] h-[370px] m-2 bg-green-400 rounded-lg font-serif">
+						<div className="absolute inset-0  rounded-lg transition-transform transform bg-green-300 hover:-translate-x-3 hover:-translate-y-3 p-10">
+							<div className="rounded-full w-24 h-24 bg-green-500">
+								<h1 className=" text-center text-6xl text-green-300 translate-y-6">
 									02
 								</h1>
 							</div>
@@ -48,10 +52,10 @@ const OurMission = () => {
 					{/* card 2 End */}
 
 					{/* card 3 start */}
-					<div className="relative w-[370px] h-[370px] m-2 bg-cyan-400 rounded-lg font-serif">
-						<div className="absolute inset-0  rounded-lg transition-transform transform bg-cyan-300 hover:-translate-x-3 hover:-translate-y-3 p-10">
-							<div className="rounded-full w-24 h-24 bg-cyan-500">
-								<h1 className=" text-center text-6xl text-cyan-300 translate-y-6">
+					<div className="relative w-[370px] h-[370px] m-2 bg-green-400 rounded-lg font-serif">
+						<div className="absolute inset-0  rounded-lg transition-transform transform bg-green-300 hover:-translate-x-3 hover:-translate-y-3 p-10">
+							<div className="rounded-full w-24 h-24 bg-green-500">
+								<h1 className=" text-center text-6xl text-green-300 translate-y-6">
 									03
 								</h1>
 							</div>
@@ -67,7 +71,7 @@ const OurMission = () => {
 					{/* card 3 End */}
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

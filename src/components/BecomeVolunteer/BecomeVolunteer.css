@@ -1,0 +1,16 @@
+.volunteerBackground {
+	background-image: url("../../../public/Volunteer-2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 50vh;
+	display: flex;
+	align-items: center;
+	background-position: center center;
+	justify-content: center;
+}
+
+@media (max-width: 767px) {
+	.volunteerBackground {
+		height: 45vh;
+	}
+}

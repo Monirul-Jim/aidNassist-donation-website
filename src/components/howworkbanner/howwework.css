@@ -1,0 +1,12 @@
+.bannersetup {
+	background-image: url("../../../public/HOWWORKTHREE1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media (max-width: 767px) {
+	.bannersetup {
+		background-size: cover;
+		background-position: center;
+	}
+}

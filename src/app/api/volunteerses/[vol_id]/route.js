@@ -24,3 +24,12 @@ export const GET = async (request, content) => {
     const result = await Volunteerses.findById(findAdata)
     return NextResponse.json({ result, success: true })
 }
+
+
+export const DELETE = async (request, content) => {
+    const vol_Id = content.params.vol_id;
+    const findAdata = { _id: vol_Id }
+    await mongoose.connect(connectionSrt);
+    const result = await Volunteerses.deleteOne(findAdata)
+    return NextResponse.json({ result, success: true })
+}

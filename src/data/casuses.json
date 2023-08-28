@@ -1,0 +1,103 @@
+[
+	{
+		"image": "https://i.ibb.co/C6gBnTW/03.jpg",
+		"category": "Education",
+		"title": "Support Underprivileged Students",
+		"description": "Help us provide quality education to underprivileged children in our community.",
+		"raisedAmount": 7500,
+		"goalAmount": 10000
+	},
+	{
+		"image": "https://i.ibb.co/j86LY5P/charity-4.jpg",
+		"category": "Healthcare",
+		"title": "Medical Supplies for Local Clinic",
+		"description": "Donate to ensure essential medical supplies are available for our local clinic.",
+		"raisedAmount": 3200,
+		"goalAmount": 5000
+	},
+	{
+		"image": "https://i.ibb.co/SPjgcPf/charity-3.jpg",
+		"category": "Environment",
+		"title": "Planting Trees for a Greener Tomorrow",
+		"description": "Join us in our initiative to plant trees and combat climate change in our region.",
+		"raisedAmount": 21000,
+		"goalAmount": 25000
+	},
+	{
+		"image": "https://i.ibb.co/gFb6F5v/cause-5.jpg",
+		"category": "Animal Welfare",
+		"title": "Rescue and Shelter for Stray Animals",
+		"description": "Your donation will help us rescue and provide shelter to stray animals in need.",
+		"raisedAmount": 4800,
+		"goalAmount": 7000
+	},
+	{
+		"image": "https://i.ibb.co/qrSJ71L/cause-2.jpg",
+		"category": "Disaster Relief",
+		"title": "Assistance for Disaster-Affected Families",
+		"description": "Support families affected by natural disasters with essential supplies and aid.",
+		"raisedAmount": 15000,
+		"goalAmount": 20000
+	},
+	{
+		"image": "https://i.ibb.co/WBVkp92/charity.jpg",
+		"category": "Arts and Culture",
+		"title": "Preserving Traditional Arts",
+		"description": "Contribute to the preservation and promotion of our rich cultural heritage.",
+		"raisedAmount": 3800,
+		"goalAmount": 5000
+	},
+	{
+		"image": "https://i.ibb.co/XVYjVCY/3.jpg",
+		"category": "Community Development",
+		"title": "Empowering Local Entrepreneurs",
+		"description": "Empower local entrepreneurs by providing resources and business training.",
+		"raisedAmount": 9200,
+		"goalAmount": 12000
+	},
+	{
+		"image": "https://i.ibb.co/VQqZ12h/charity-5.jpg",
+		"category": "Women's Rights",
+		"title": "Support Women's Empowerment",
+		"description": "Help us empower women through education, vocational training, and advocacy.",
+		"raisedAmount": 5600,
+		"goalAmount": 8000
+	},
+	{
+		"image": "https://i.ibb.co/C0HxqGy/2.jpg",
+		"category": "Hunger Relief",
+		"title": "Feeding the Hungry",
+		"description": "Donate to provide meals and alleviate hunger in our community.",
+		"raisedAmount": 2850,
+		"goalAmount": 4000
+	},
+	{
+		"image": "https://i.ibb.co/cctPLyb/02.jpg",
+		"category": "Youth Development",
+		"title": "Mentorship and Skill Building",
+		"description": "Support our youth development program to provide mentorship and skill-building opportunities.",
+		"raisedAmount": 6200,
+		"goalAmount": 10000
+	},
+	{
+		"image": "https://i.ibb.co/cC1dgYY/1.jpg",
+		"category": "Elderly Care",
+		"title": "Caring for the Elderly",
+		"description": "Your donation will help provide essential care and companionship to elderly individuals.",
+		"raisedAmount": 4100,
+		"goalAmount": 6000
+	},
+	{
+		"image": "https://i.ibb.co/TmwHWT9/01.jpg",
+		"category": "Cancer Research",
+		"title": "Advancing Cancer Research",
+		"description": "Contribute to groundbreaking research and treatments in the fight against cancer.",
+		"raisedAmount": 18750,
+		"goalAmount": 25000
+	}
+]
+
+
+
+
+

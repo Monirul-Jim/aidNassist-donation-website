@@ -1,10 +1,10 @@
+import DonateNow from '@/components/DonateNow/DonateNow';
 import React from 'react';
-import DashboardSidebar from './DashboardSidebar';
 
 const DashboardPage = () => {
     return (
         <div>
-            <DashboardSidebar></DashboardSidebar>
+            <DonateNow/>
         </div>
     );
 };
