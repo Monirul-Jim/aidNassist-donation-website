@@ -20,7 +20,7 @@ const Causes = () => {
 					</p>
 				</div>
 				<div className="md:text-center sm:ml-auto">
-					<Link href="/causesdetails" className="nav-link">
+					<Link href="/" className="nav-link">
 						<button
 							type="button"
 							class="focus:outline-none text-white bg-emerald-500 hover:bg-blue-800 focus:ring-4 focus:ring-purple-300 font-medium text-sm px-6 py-3 mb-2"

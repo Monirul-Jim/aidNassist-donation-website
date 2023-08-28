@@ -8,18 +8,18 @@ import Link from "next/link";
 import React from "react";
 import { HiOutlineHeart } from "react-icons/hi";
 
-const AllCauses = async () => {
-	let data = await fetch("/api/causes");
-	data = await data.json();
-	if (data.success) {
-		return data.result;
-	} else {
-		return { success: false };
-	}
-};
+// const AllCauses = async () => {
+// 	let data = await fetch("/api/causes");
+// 	data = await data.json();
+// 	if (data.success) {
+// 		return data.result;
+// 	} else {
+// 		return { success: false };
+// 	}
+// };
 
 export default async function Page() {
-	const causes = await AllCauses();
+	const causes = [];
 	console.log(causes);
 
 	return (
