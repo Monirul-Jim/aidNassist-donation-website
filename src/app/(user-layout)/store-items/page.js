@@ -12,7 +12,7 @@ const StoreItems = () => {
     return (
         <div>
             <h2 className='text-5xl text-center mt-52'>Store</h2>
-            <p className='text-sm text-center mt-3'>Buy Any of these & it will add as a donation</p>
+            <p className='text-sm text-center mt-3'>Buy Any of these & it will add as a donations</p>
             <Store/>
         </div>
     );
