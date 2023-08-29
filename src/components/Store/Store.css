@@ -1,0 +1,24 @@
+.category-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0% 100% 46% 54% / 0% 46% 54% 100% ;
+}
+
+.category-button.active {
+    background-color: #4CAF50; 
+    color: white; 
+}
+
+.pagination-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%  ;
+    background-color: #4CAF50; 
+    color: white; 
+}

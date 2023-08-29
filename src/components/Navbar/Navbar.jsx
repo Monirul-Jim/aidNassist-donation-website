@@ -283,6 +283,17 @@ const Navbar = () => {
 					>
 						FAQ
 					</Link>
+					<Link
+						href="/store-items"
+						onClick={() => setActiveLink("store-items")}
+						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${
+							activeLink === "store-items"
+								? "text-emerald-500 font-medium"
+								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+						}`}
+					>
+						Store
+					</Link>
 
 					<Link
 						href="/feedback"
