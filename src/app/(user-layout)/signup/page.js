@@ -7,7 +7,7 @@ export const metadata = {
 
 const Signup = () => {
 	return (
-		<div className="hero my-10">
+		<div className="hero mt-32 mb-10">
 			<div className="hero-content flex flex-col lg:flex-row justify-center">
 				<div className="text-center lg:text-left">
 					<h1 className="text-5xl font-bold text-center">

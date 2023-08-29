@@ -5,7 +5,7 @@ import React from "react";
 
 const Login = () => {
 	return (
-		<div className="hero bg-base-200 my-10">
+		<div className="hero bg-base-200 mt-20 mb-10">
 			<div className="hero-content flex flex-col lg:flex-row justify-center">
 				<div className="text-center p-10 lg:text-left lg:w-1/2">
 					<h1 className="text-5xl font-bold text-center">
