@@ -23,7 +23,7 @@ const Causes = () => {
 					<Link href="/causesdetails" className="nav-link">
 						<button
 							type="button"
-							class="focus:outline-none text-white bg-emerald-500 hover:bg-blue-800 focus:ring-4 focus:ring-purple-300 font-medium text-sm px-6 py-3 mb-2"
+							className="focus:outline-none text-white bg-emerald-500 hover:bg-blue-800 focus:ring-4 focus:ring-purple-300 font-medium text-sm px-6 py-3 mb-2"
 						>
 							View Details
 						</button>
