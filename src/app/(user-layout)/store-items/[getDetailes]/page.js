@@ -88,7 +88,7 @@ const GetDetailItems = (props) => {
 
                             <hr />
                             <p className="text-sm">Category: {itemDetails.category}</p>
-                            <p>{itemDetails.quantity} <span className="text-sm">Available</span></p>
+                            <p>{itemDetails.quantity} <span className="text-sm">Available Now</span></p>
                         </div>
                     </div>
                     <div>
