@@ -4,6 +4,7 @@ import Star from "@/components/Store/Star/Star";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { FaStore } from "react-icons/fa";
 
 const GetDetailItems = (props) => {
@@ -12,7 +13,6 @@ const GetDetailItems = (props) => {
     const [isLoading, setIsLoading] = useState(true);
     const [isDescriptionOpen, setIsDescriptionOpen] = useState(true);
     const [isReviewsOpen, setIsReviewsOpen] = useState(false);
-
 
 
     useEffect(() => {
@@ -50,6 +50,25 @@ const GetDetailItems = (props) => {
 
 
 
+    const handleCart = async itemDetails => {
+        const cartItems = { itemId: itemDetails._id, name: itemDetails.name, itemImg: itemDetails.picture, category: itemDetails.category, price: itemDetails.price, ratings: itemDetails.ratings, description: itemDetails.description }
+        console.log({ cartItems });
+        let result = await fetch("/api/cartforusers", {
+            method: "POST",
+            body: JSON.stringify(cartItems)
+        });
+        result = await result.json();
+        if (result.success) {
+            toast.success('Added to Cart!')
+        }
+
+    }
+
+
+
+
+
+
 
     return (
         <div className="my-32">
@@ -80,6 +99,11 @@ const GetDetailItems = (props) => {
                             <div className="text-3xl my-5">
                                 <Star value={itemDetails.ratings}></Star>
                             </div>
+
+                            <div>
+                                <button onClick={() => handleCart(itemDetails)} className="rounded-xl bg-green-400  px-5 py-3 text-white my-5">Add to Cart</button>
+                            </div>
+
 
                             <div className="max-w-md  mb-10">
                                 <h2 className="underline text-2xl mb-5"> From Author:</h2>
@@ -140,44 +164,6 @@ const GetDetailItems = (props) => {
 
                             )}
                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

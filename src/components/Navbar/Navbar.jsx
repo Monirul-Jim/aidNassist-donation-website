@@ -6,6 +6,7 @@ import Link from "next/link";
 import useAuth from "@/hooks/useAuth";
 import { useTheme } from "next-themes";
 import "./Navbar.css";
+import { FaShareSquare, FaStore } from "react-icons/fa";
 
 const Navbar = () => {
 	const { user, logout } = useAuth();
@@ -25,6 +26,12 @@ const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [showSpinner, setShowSpinner] = useState(false);
 	const [navbarTransparent, setNavbarTransparent] = useState(true);
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+	const toggleDown = () => {
+		setIsDropdownOpen(!isDropdownOpen);
+	};
+
 	const toggleDropdown = () => {
 		setShowSpinner(true);
 		setIsOpen(!isOpen);
@@ -82,11 +89,10 @@ const Navbar = () => {
 						/>
 					</button>
 					<div
-						className={`absolute right-0 mt-2 w-48 bg-white divide-y divide-gray-100 rounded-sm shadow dark:bg-gray-700 dark:divide-gray-600 ${
-							isOpen
+						className={`absolute right-0 mt-2 w-48 bg-white divide-y divide-gray-100 rounded-sm shadow dark:bg-gray-700 dark:divide-gray-600 ${isOpen
 								? "opacity-100 visible"
 								: "opacity-0 invisible"
-						} transition-opacity duration-300`}
+							} transition-opacity duration-300`}
 						id="user-dropdown"
 					>
 						{showSpinner ? (
@@ -217,92 +223,170 @@ const Navbar = () => {
 					</div>
 				</div>
 				<div
-					className={`md:flex items-center md:space-x-6 ${
-						mobileMenuOpen ? "block bg-blue-900" : "hidden"
-					} ${
-						user
+					className={`md:flex items-center md:space-x-6 ${mobileMenuOpen ? "block bg-blue-900" : "hidden"
+						} ${user
 							? "bg-white ml-32 shadow-lg md:bg-transparent p-4"
 							: "bg-opacity-40"
-					}`}
+						}`}
 				>
 					<Link
 						href="/"
 						onClick={() => setActiveLink("home")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${
-							activeLink === "home"
+						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "home"
 								? "text-emerald-500 font-medium"
 								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-						}`}
+							}`}
 					>
 						Home
 					</Link>
 
-					<Link
+
+
+
+
+
+
+
+
+
+
+					{/* ------------------------------------------------------- */}
+
+
+
+					<div className="relative">
+						<button
+							id="dropdownNavbarLink"
+							onClick={toggleDown}
+							className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-500 md:p-0 md:w-auto dark:text-white"
+						>
+							About us
+							<svg
+								className={`w-2.5 h-2.5 ml-2.5 transition-transform ${isDropdownOpen ? 'rotate-180' : ''
+									}`}
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 10 6"
+							>
+								<path
+									stroke="currentColor"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="m1 1 4 4 4-4"
+								/>
+							</svg>
+						</button>
+
+						{isDropdownOpen && (
+							<div
+								id="dropdownNavbar"
+								className="z-10 absolute top-full md:mt-4 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+							>
+								<ul
+									className="py-2 px-5 text-gray-700 dark:text-gray-400"
+									aria-labelledby="dropdownNavbarLink"
+								>
+									<li>
+										<Link
+											href="/about"
+											onClick={() => setActiveLink("about")}
+											className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "about"
+												? "text-emerald-500 font-medium"
+												: "text-black md:text-gray-600 bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+												}`}
+										>
+											About
+										</Link>
+									</li>
+									<li>
+										<Link
+											href="/howwework"
+											onClick={() => setActiveLink("howwework")}
+											className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "howwework"
+												? "text-emerald-500 font-medium"
+												: "text-black md:text-gray-600 bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+												}`}
+										>
+											How we Work
+										</Link>
+									</li>
+									<li>
+										<Link
+											href="/faq"
+											onClick={() => setActiveLink("faq")}
+											className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "faq"
+												? "text-emerald-500 font-medium"
+												: "text-black md:text-gray-600 bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+												}`}
+										>
+											FAQ
+										</Link>
+									</li>
+								</ul>
+							</div>
+						)}
+					</div>
+
+
+
+					{/* ------------------------------------------------------- */}
+
+
+
+
+					{/* <Link
 						href="/about"
 						onClick={() => setActiveLink("about")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${
-							activeLink === "about"
+						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "about"
 								? "text-emerald-500 font-medium"
 								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-						}`}
+							}`}
 					>
 						About
-					</Link>
+					</Link> */}
 
 					<Link
 						href="/event"
 						onClick={() => setActiveLink("event")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${
-							activeLink === "event"
+						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "event"
 								? "text-emerald-500 font-medium"
 								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-						}`}
+							}`}
 					>
 						Event
 					</Link>
 
-					<Link
+					{/* <Link
 						href="/howwework"
 						onClick={() => setActiveLink("howwework")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${
-							activeLink === "howwework"
+						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "howwework"
 								? "text-emerald-500 font-medium"
 								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-						}`}
+							}`}
 					>
 						How we Work
-					</Link>
-					<Link
+					</Link> */}
+					{/* <Link
 						href="/faq"
 						onClick={() => setActiveLink("faq")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${
-							activeLink === "faq"
+						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "faq"
 								? "text-emerald-500 font-medium"
 								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-						}`}
+							}`}
 					>
 						FAQ
-					</Link>
-					<Link
-						href="/store-items"
-						onClick={() => setActiveLink("store-items")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${
-							activeLink === "store-items"
-								? "text-emerald-500 font-medium"
-								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-						}`}
-					>
-						Store
-					</Link>
+					</Link> */}
+					
 
 					<Link
 						href="/feedback"
 						onClick={() => setActiveLink("feedback")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${
-							activeLink === "feedback"
+						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "feedback"
 								? "text-emerald-500 font-medium"
 								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-						}`}
+							}`}
 					>
 						Feedback
 					</Link>
@@ -310,13 +394,36 @@ const Navbar = () => {
 					<Link
 						href="/contactus"
 						onClick={() => setActiveLink("contactus")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${
-							activeLink === "contactus"
+						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "contactus"
 								? "text-emerald-500 font-medium"
 								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-						}`}
+							}`}
 					>
 						Contact Us
+					</Link>
+
+
+
+					<Link
+						href="/store-items"
+						onClick={() => setActiveLink("store-items")}
+						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "store-items"
+								? "text-emerald-500 font-medium"
+								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+							}`}
+					>
+						<FaStore/>
+					</Link>
+
+					<Link
+						href="/share"
+						onClick={() => setActiveLink("share")}
+						className={`flex text-xl justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "share"
+								? "text-emerald-500 font-medium"
+								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+							}`}
+					>
+						<FaShareSquare />
 					</Link>
 					{/* Here Night and Light Mood Start */}
 					<div>
