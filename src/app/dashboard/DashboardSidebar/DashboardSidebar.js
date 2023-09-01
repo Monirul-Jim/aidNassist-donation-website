@@ -69,9 +69,9 @@ const DashboardSidebar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/dashboard/eventView" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <Link href="/dashboard/allroles" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                 <MdEventNote className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></MdEventNote>
-                                <span className="flex-1 ml-3 whitespace-nowrap">Events </span>
+                                <span className="flex-1 ml-3 whitespace-nowrap">Manage Users</span>
                             </Link>
                         </li>
                         <li>

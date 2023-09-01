@@ -4,7 +4,7 @@ import GoogleLogin from "@/components/GoogleLogin";
 import useAuth from "@/hooks/useAuth";
 import createJWT from "@/util/createJWT";
 import { useSearchParams, useRouter } from "next/navigation";
-import { startTransition } from "react";
+import { startTransition, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import Link from "next/link";
@@ -21,6 +21,11 @@ const LoginForm = () => {
 	const search = useSearchParams();
 	const from = search.get("redirectUrl") || "/";
 	const { replace, refresh } = useRouter();
+
+	const [showPassword, setShowPassword] = useState(false);
+	const handleCheckboxChange = () => {
+        setShowPassword(!showPassword);
+    };
 
 	const onSubmit = async (data) => {
 		const { email, password } = data;
@@ -50,7 +55,7 @@ const LoginForm = () => {
 					placeholder="email"
 					id="email"
 					name="email"
-					className="input input-bordered"
+					className="input input-bordered text-black"
 					autoComplete="email"
 					{...register("email", {
 						required: true,
@@ -68,11 +73,11 @@ const LoginForm = () => {
 					Password
 				</label>
 				<input
-					type="password"
+					type={showPassword ? "text" : "password"}
 					placeholder="password"
 					id="password"
 					name="password"
-					className="input input-bordered"
+					className="input input-bordered text-black"
 					autoComplete="new-password"
 					{...register("password", { required: true, minLength: 6 })}
 				/>
@@ -87,6 +92,21 @@ const LoginForm = () => {
 					</a>
 				</label>
 			</div>
+
+			<div className="form-control">
+					<label className="label cursor-pointer">
+						<span className="label-text mr-72">Show Password</span>
+						<input onChange={handleCheckboxChange} type="checkbox" checked={showPassword} className="checkbox checkbox-primary" />
+					</label>
+				</div>
+
+
+
+
+
+
+
+
 			<div className="form-control mt-6">
 				<button className="btn btn-[#059669]" type="submit">
 					Login
