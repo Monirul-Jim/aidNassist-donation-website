@@ -1,3 +1,4 @@
+import FacebookMessage from "@/components/FacebookMessage/FacebookMessage";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import Providers from "@/providers";
@@ -8,6 +9,7 @@ const UserLayout = ({ children }) => {
 		<div>
 			<Providers>
 				<Navbar />
+				<FacebookMessage/>
 				{children}
 				<Footer />
 			</Providers>
