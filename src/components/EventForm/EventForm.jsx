@@ -39,7 +39,7 @@ const EventForm = () => {
     return (
         <>
             <Toaster></Toaster>
-            <div className="ml-0 mt-20 md:mt-32 lg:ml-0 md:ml-64">
+            <div className="ml-0 lg:ml-[400px] mt-20 md:mt-32  md:ml-64">
                 <form onSubmit={handleSubmit(onSubmit)} className="mx-2 md:mx-10 border border-blue-600 p-10 shadow-md rounded my-10 ">
                     <h2 className="text-3xl text-center font-semibold mb-8">Add a Event</h2>
                     <div className="relative z-0 w-full mb-6 group">
