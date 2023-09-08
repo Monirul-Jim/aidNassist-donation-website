@@ -17,7 +17,7 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PAYMENT_PK);
 
 const DonatePayment = () => {
   const { user } = useAuth();
-  const [selectedPrice, setSelectedPrice] = useState("");
+  const [selectedPrice, setSelectedPrice] = useState(" ");
   const [loading, setLoading] = useState(false);
   const [menu] = useMenu();
   const onetime = menu.filter((data) => data.category === "onetime");
