@@ -12,3 +12,11 @@ export async function GET() {
 
     return NextResponse.json({ result: data, success: true })
 }
+
+export async function POST(request) {
+	const payload = await request.json();
+	await mongoose.connect(connectionSrt);
+	let volunteer = new Volunteersmodel(payload);
+	const result = await volunteer.save();
+	return NextResponse.json({ result, success: true });
+}

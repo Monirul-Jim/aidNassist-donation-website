@@ -8,6 +8,7 @@ import Partner from "@/components/Partner/Partner";
 import DonateNow from "@/components/DonateNow/DonateNow";
 import Misson from "@/components/Mission/Misson";
 import Testimonial from "@/components/Testimonial/Testimonial";
+import DonatePayment from "@/pages/donatemoney/money";
 
 export const metadata = {
 	title: 'AidNAssist | Home',
@@ -23,6 +24,7 @@ export default function Home() {
 		<div>
 			{/* here all function give here */}
 			<HomeSlider></HomeSlider>
+			<DonatePayment/>
 			<DonateNow/>
 			<Misson></Misson>
 			<BecomeVolunteer />

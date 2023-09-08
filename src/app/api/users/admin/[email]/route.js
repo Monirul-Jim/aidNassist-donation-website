@@ -3,7 +3,6 @@ import User from "@/lib/model2/user";
 
 import { NextResponse } from "next/server";
 import { connectionSrt } from "@/lib/db";
-// import { connectionSrt } from "@/lib/db";
 
 /* export default async function handler(req, res) {
 	try {
@@ -39,44 +38,63 @@ import { connectionSrt } from "@/lib/db";
 	}
 } */
 
-export const GET = async (request, content) => {
+/* export const GET = async (request, content) => {
 	const vol_Id = content.params.email;
 	const findAdata = { email: vol_Id };
 	await mongoose.connect(connectionSrt);
 	const result = await User.findOne(findAdata);
 	return NextResponse.json({ result, success: true });
-};
-
-
-/* export const GET = async (request, content) => {
-	try {
-		const volEmail = content.params.email;
-		const findData = { email: volEmail };
-
-		await mongoose.connect(connectionSrt);
-		const user = await User.findOne(findData);
-
-		if (!user) {
-			return NextResponse.json({
-				error: "User not found",
-				success: false,
-			});
-		}
-
-		const isAdmin = user.role === "admin";
-
-		return NextResponse.json({
-			result: {
-				admin: isAdmin,
-				findData,
-			},
-			success: true,
-		});
-	} catch (error) {
-		console.error("Error:", error);
-		return NextResponse.json({
-			error: "An error occurred while fetching data.",
-			success: false,
-		});
-	}
 }; */
+
+
+// export const GET = async (request, content) => {
+// 	try {
+// 		const volEmail = content.params.email;
+// 		const findData = { email: volEmail };
+// 		await mongoose.connect(connectionSrt);
+// 		const user = await User.find(findData);
+// 		if (!user) {
+// 			return NextResponse.json({
+// 				error: "User not found",
+// 				success: false,
+// 			});
+// 		}
+// 		const isAdmin = user.role === "admin";
+// 		return NextResponse.json({
+// 			result: {
+// 				admin: isAdmin,
+// 				findData,
+// 			},
+// 			success: true,
+// 		});
+// 	} catch (error) {
+// 		console.error("Error:", error);
+// 		return NextResponse.json({
+// 			error: "An error occurred while fetching data.",
+// 			success: false,
+// 		});
+// 	}
+// };
+
+
+export const GET = async (request, content) => {
+	const vol_Id = content.params.email;
+	const findAdata = { email: vol_Id };
+	
+	try {
+	  await mongoose.connect(connectionSrt);
+	  const user = await User.findOne(findAdata);
+  
+	  if (!user) {
+		return NextResponse.json({ success: false, message: "User not found" });
+	  }
+  
+	  const isAdmin = user.role === "admin";
+  
+	  return NextResponse.json({ result: user, isAdmin, success: true });
+	} catch (error) {
+	  console.error("Error:", error);
+	  return NextResponse.json({ success: false, message: "An error occurred" });
+	} 
+  };
+  

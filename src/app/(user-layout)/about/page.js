@@ -20,20 +20,6 @@ export const metadata = {
 const About = () => {
 	return (
 		<div className="p-2 md:p-0">
-			{/* banner section start */}
-			{/* <div className='banner_section relative bg-green-300'>
-                <div className='container mx-auto text-center py-40 '>
-                    <h1 className='text-white text-3xl md:text-5xl font-semibold uppercase'>A few words about <br/> our charity</h1>
-                    <p className='text-white mt-4 w-full lg:w-3/4 mx-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi utommodo consequat.</p>
-                </div>
-                <div className='style_image'>
-                    <Image className='absolute top-0 right-0 rotate-180 w-1/3 md:w-[170px] lg:w-[300px]' width="300" height="300" src={Overlay} alt='overlay image'/>
-                </div>
-                <div className='style_image'>
-                    <Image className='absolute bottom-0 left-0 w-1/3 md:w-[170px] lg:w-[300px]' width="300" height="300" src={Overlay} alt='overlay image'/>
-                </div>
-            </div> */}
-			{/* banner section end */}
 			<CommonBanner PageTittle={"About"} color={"Us"}></CommonBanner>
 
 			{/* our about text section start */}

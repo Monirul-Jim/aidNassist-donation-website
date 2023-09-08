@@ -1,6 +1,7 @@
 'use client'
 
 import Star from "@/components/Store/Star/Star";
+import useAuth from "@/hooks/useAuth";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -13,6 +14,7 @@ const GetDetailItems = (props) => {
     const [isLoading, setIsLoading] = useState(true);
     const [isDescriptionOpen, setIsDescriptionOpen] = useState(true);
     const [isReviewsOpen, setIsReviewsOpen] = useState(false);
+    const { user } = useAuth();
 
 
     useEffect(() => {
@@ -50,10 +52,25 @@ const GetDetailItems = (props) => {
 
 
 
+    // const handleCart = async itemDetails => {
+    //     const cartItems = { itemId: itemDetails._id, name: itemDetails.name, itemImg: itemDetails.picture, category: itemDetails.category, price: itemDetails.price, ratings: itemDetails.ratings, description: itemDetails.description }
+    //     console.log({ cartItems });
+    //     let result = await fetch("/api/cartforusers", {
+    //         method: "POST",
+    //         body: JSON.stringify(cartItems)
+    //     });
+    //     result = await result.json();
+    //     if (result.success) {
+    //         toast.success('Added to Cart!')
+    //     }
+
+    // }
+
+
     const handleCart = async itemDetails => {
-        const cartItems = { itemId: itemDetails._id, name: itemDetails.name, itemImg: itemDetails.picture, category: itemDetails.category, price: itemDetails.price, ratings: itemDetails.ratings, description: itemDetails.description }
+        const cartItems = { itemId: itemDetails._id, name: itemDetails.name, itemImg: itemDetails.picture, category: itemDetails.category, price: itemDetails.price, ratings: itemDetails.ratings, description: itemDetails.description, email: user.email }
         console.log({ cartItems });
-        let result = await fetch("/api/cartforusers", {
+        let result = await fetch("/api/onlyuserscart", {
             method: "POST",
             body: JSON.stringify(cartItems)
         });

@@ -1,0 +1,12 @@
+.slide-progress {
+	animation: slideProgress 1s ease-in-out forwards;
+}
+
+@keyframes slideProgress {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: var(--progress-completed, 100%);
+	}
+}
