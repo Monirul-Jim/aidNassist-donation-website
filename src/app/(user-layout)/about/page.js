@@ -95,62 +95,6 @@ const About = () => {
 					</div>
 				</div>
 			</div>
-			{/* our about text section end */}
-			{/* our mission vision and goal section start  */}
-			{/* <div className="my-16 ">
-				<div className="container mx-auto ">
-					<div className="md:flex gap-10 justify-between">
-						<div className="">
-							<h1 className="text-slate-900 text-2xl md:text-3xl font-semibold ">
-								Our Vision
-							</h1>
-							<p className="text-slate-600 mt-4">
-								Adipiscing aliquam orci sed suspendisse
-								convallis venenatis congue. Facilisi scelerisque
-								donec in libero et hendrerit. At nulla lorem a
-								non maecenas.
-							</p>
-							<p className="text-slate-600 mt-4">
-								Ipsum interdum tristique ac risus in libero.
-								Odio id commodo cursus etiam. Ultricies sed eget
-								mauris, nisl. Amet.
-							</p>
-						</div>
-						<div className="mt-10 md:mt-0">
-							<h1 className="text-slate-900 text-2xl md:text-3xl font-semibold ">
-								Our Mission
-							</h1>
-							<p className="text-slate-600 mt-4">
-								Adipiscing aliquam orci sed suspendisse
-								convallis venenatis congue. Facilisi scelerisque
-								donec in libero et hendrerit. At nulla lorem a
-								non maecenas.
-							</p>
-							<p className="text-slate-600 mt-4">
-								Ipsum interdum tristique ac risus in libero.
-								Odio id commodo cursus etiam. Ultricies sed eget
-								mauris, nisl. Amet.
-							</p>
-						</div>
-						<div className="mt-10 md:mt-0">
-							<h1 className="text-slate-900 text-2xl md:text-3xl font-semibold ">
-								Our Goal
-							</h1>
-							<p className="text-slate-600 mt-4">
-								Adipiscing aliquam orci sed suspendisse
-								convallis venenatis congue. Facilisi scelerisque
-								donec in libero et hendrerit. At nulla lorem a
-								non maecenas.
-							</p>
-							<p className="text-slate-600 mt-4">
-								Ipsum interdum tristique ac risus in libero.
-								Odio id commodo cursus etiam. Ultricies sed eget
-								mauris, nisl. Amet.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div> */}
 			{/* our mission vision and goal section end  */}
 			<OurMission />
 		</div>

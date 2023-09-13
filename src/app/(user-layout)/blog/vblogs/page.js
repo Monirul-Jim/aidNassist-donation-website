@@ -44,7 +44,7 @@ const VBLOGS = () => {
                             <span className="sr-only">Loading...</span>
                         </div>
                     </div>) : (
-                        <div className="lg:grid lg:grid-cols-4 lg:gap-5">
+                        <div className="lg:grid lg:grid-cols-3 lg:gap-5">
                             {
                                 userVols.map((blog) => (
 

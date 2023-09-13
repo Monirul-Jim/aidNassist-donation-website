@@ -19,7 +19,7 @@ const Causes = () => {
 
 	return (
 		<section className="mx-auto">
-			<div className="flex flex-col md:flex-row items-center md:justify-between max-w-7xl mx-auto">
+			<div id="causes" className="flex flex-col md:flex-row items-center md:justify-between max-w-7xl mx-auto">
 				<div className="mb-5">
 					<motion.h1
 						className="sm:text-4xl lg:d-done text-4xl lg:text-5xl font-bold pt-16"

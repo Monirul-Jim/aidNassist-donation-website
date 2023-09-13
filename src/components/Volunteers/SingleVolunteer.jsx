@@ -45,21 +45,21 @@ const SingleVolunteer = ({ volunteer }) => {
 				></Image>
 
 				<div className="absolute bottom-0 left-0 bg-opacity-75 bg-emerald-500 text-white p-2">
-					<h5 className="text-lg font-bold">{name}</h5>
+					<h5 className="text-lg font-bold">{name ? name : "Anonymous"}</h5>
 					<p className="text-base">{designation}</p>
 				</div>
 			</div>
 			<div className="p-4">
 				<p className="mb-2 text-gray-700 dark:text-gray-400">
 					<span className="font-bold">Email: </span>
-					{email}
+					{email ? email : "volunteers@email.com"}
 				</p>
 				<p className="mb-2 text-gray-700 dark:text-gray-400">
 					<span className="font-bold">Blood: </span>
 					{bloodGroup}
 				</p>
 				<p className="mb-2 text-gray-700 dark:text-gray-400">
-					<span className="font-bold">Contact: </span>
+					<span className="font-bold">Contact: +</span>
 					{phoneNumber}
 				</p>
 				<p className="mb-2 text-gray-700 dark:text-gray-400">

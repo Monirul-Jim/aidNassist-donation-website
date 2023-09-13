@@ -4,10 +4,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import mainSlider from "@/data/mainSlider";
 import SingleHomeSlider from "./SingleHomeSlider";
 import "swiper/css/bundle";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const HomeSlider = () => {
+	useEffect(() => {
+		Aos.init({ duration: 1000 });
+	}, []);
 	return (
-		<section className="main-slider">
+		<section className="main-slider" data-aos="fade-up"
+			data-aos-anchor-placement="top-bottom">
 			<Swiper
 				slidesPerView={1}
 				loop

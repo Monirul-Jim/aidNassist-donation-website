@@ -38,30 +38,30 @@ const Footer = () => {
 							</h2>
 							<ul className="text-white dark:text-gray-400 font-medium">
 								<li className="mb-4">
-									<a href="#" className="hover:underline">
+									<a href="/" className="hover:underline">
 										Home
 									</a>
 								</li>
 								<li className="mb-4">
-									<a href="#" className="hover:underline">
+									<a href="about" className="hover:underline">
 										About Us
 									</a>
 								</li>
 								<li className="mb-4">
-									<a href="#" className="hover:underline">
+									<a href="#causes" className="hover:underline">
 										Causes
 									</a>
 								</li>
 								<li className="mb-4">
 									<a
-										href="#"
+										href="#gallery"
 										className="text-white hover:underline"
 									>
 										Gallery
 									</a>
 								</li>
 								<li className="mb-4">
-									<a href="#" className="hover:underline">
+									<a href="event" className="hover:underline">
 										Event
 									</a>
 								</li>
@@ -75,22 +75,22 @@ const Footer = () => {
 								<li className="mb-2 flex gap-2">
 									<MdOutlinePhoneInTalk className="text-emerald-600 text-2xl" />
 
-									<snap className="mb-1 text-sm">
-										Phone: <br /> +123 678 1478
-									</snap>
+									<span className="mb-1 text-sm">
+										Phone: <br /> +8801846854448
+									</span>
 								</li>
 								<li className="mb-2 flex gap-2">
 									<BsEnvelopeHeart className="text-emerald-600 text-2xl" />
-									<snap className="mb-1 text-sm">
-										Email: <br /> yuntun@menteo.com
-									</snap>
+									<span className="mb-1 text-sm">
+										Email: <br /> AidNAssist2023@info.com
+									</span>
 								</li>
 								<li className="mb-2 flex gap-2">
 									<RiMapPinRangeFill className="text-emerald-600 text-3xl" />
-									<snap className="mb-1 text-sm">
+									<span className="mb-1 text-sm">
 										Address: <br /> 643 Farragut Street
 										Northwest, Washington AR 20011
-									</snap>
+									</span>
 								</li>
 							</ul>
 						</div>
@@ -110,7 +110,7 @@ const Footer = () => {
 										id="email"
 										name="email"
 										className="w-[80%] p-2 border rounded outline-none focus:border-emerald-600"
-										placeholder="you@example.com"
+										placeholder="name@mail.com"
 										required
 									/>
 								</div>

@@ -5,7 +5,7 @@ import React from "react";
 import { HiOutlineHeart } from "react-icons/hi";
 
 const AllCauses = async () => {
-	let data = await fetch("http://localhost:3000/api/causes");
+	let data = await fetch("/api/causes");
 	data = await data.json();
 	if (data.success) {
 		return data.result;

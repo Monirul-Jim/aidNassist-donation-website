@@ -27,9 +27,13 @@ const Navbar = () => {
 	const [showSpinner, setShowSpinner] = useState(false);
 	const [navbarTransparent, setNavbarTransparent] = useState(true);
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+	const [writingDropDown, setWritingDropDown] = useState(false);
 
 	const toggleDown = () => {
 		setIsDropdownOpen(!isDropdownOpen);
+	};
+	const toggleWriting = () => {
+		setWritingDropDown(!writingDropDown);
 	};
 
 	const toggleDropdown = () => {
@@ -90,8 +94,8 @@ const Navbar = () => {
 					</button>
 					<div
 						className={`absolute right-0 mt-2 w-48 bg-white divide-y divide-gray-100 rounded-sm shadow dark:bg-gray-700 dark:divide-gray-600 ${isOpen
-								? "opacity-100 visible"
-								: "opacity-0 invisible"
+							? "opacity-100 visible"
+							: "opacity-0 invisible"
 							} transition-opacity duration-300`}
 						id="user-dropdown"
 					>
@@ -233,8 +237,8 @@ const Navbar = () => {
 						href="/"
 						onClick={() => setActiveLink("home")}
 						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "home"
-								? "text-emerald-500 font-medium"
-								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+							? "text-emerald-500 font-medium"
+							: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
 							}`}
 					>
 						Home
@@ -343,61 +347,104 @@ const Navbar = () => {
 
 
 
+
 					{/* ------------------------------------------------------- */}
 
 
 
 
-					{/* <Link
-						href="/about"
-						onClick={() => setActiveLink("about")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "about"
-								? "text-emerald-500 font-medium"
-								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-							}`}
-					>
-						About
-					</Link> */}
+
+
+
+					{/* ----------------------Writing Blog Drop Down---------------------- */}
+					{/* ------------------------------------------------------- */}
+
+					<div className="relative">
+						<button
+							id="dropdownNavbarLink"
+							onClick={toggleWriting}
+							className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-500 md:p-0 md:w-auto dark:text-white"
+						>
+							Write a Blog
+							<svg
+								className={`w-2.5 h-2.5 ml-2.5 transition-transform ${writingDropDown ? 'rotate-180' : ''
+									}`}
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 10 6"
+							>
+								<path
+									stroke="currentColor"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="m1 1 4 4 4-4"
+								/>
+							</svg>
+						</button>
+
+						{writingDropDown && (
+							<div
+								id="dropdownNavbar"
+								className="z-10 absolute top-full md:mt-4 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+							>
+								<ul
+									className="py-2 px-5 text-gray-700 dark:text-gray-400"
+									aria-labelledby="dropdownNavbarLink"
+								>
+									<li>
+										<Link
+											href="/writeblogd"
+											onClick={() => setActiveLink("writeblogd")}
+											className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "writeblogd"
+												? "text-emerald-500 font-medium"
+												: "text-black md:text-gray-600 bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+												}`}
+										>
+											For Donators
+										</Link>
+									</li>
+									<li>
+										<Link
+											href="/writeblogv"
+											onClick={() => setActiveLink("writeblogv")}
+											className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "writeblogv"
+												? "text-emerald-500 font-medium"
+												: "text-black md:text-gray-600 bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+												}`}
+										>
+											For Volunteers
+										</Link>
+									</li>
+								</ul>
+							</div>
+						)}
+					</div>
+
+					{/* ------------------------------------------------------- */}
+
+
 
 					<Link
 						href="/event"
 						onClick={() => setActiveLink("event")}
 						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "event"
-								? "text-emerald-500 font-medium"
-								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+							? "text-emerald-500 font-medium"
+							: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
 							}`}
 					>
 						Event
 					</Link>
 
-					{/* <Link
-						href="/howwework"
-						onClick={() => setActiveLink("howwework")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "howwework"
-								? "text-emerald-500 font-medium"
-								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-							}`}
-					>
-						How we Work
-					</Link> */}
-					{/* <Link
-						href="/faq"
-						onClick={() => setActiveLink("faq")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "faq"
-								? "text-emerald-500 font-medium"
-								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-							}`}
-					>
-						FAQ
-					</Link> */}
-					
+
 
 					<Link
 						href="/feedback"
 						onClick={() => setActiveLink("feedback")}
 						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "feedback"
-								? "text-emerald-500 font-medium"
-								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+							? "text-emerald-500 font-medium"
+							: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
 							}`}
 					>
 						Feedback
@@ -407,8 +454,8 @@ const Navbar = () => {
 						href="/contactus"
 						onClick={() => setActiveLink("contactus")}
 						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "contactus"
-								? "text-emerald-500 font-medium"
-								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+							? "text-emerald-500 font-medium"
+							: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
 							}`}
 					>
 						Contact Us
@@ -420,19 +467,19 @@ const Navbar = () => {
 						href="/store-items"
 						onClick={() => setActiveLink("store-items")}
 						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "store-items"
-								? "text-emerald-500 font-medium"
-								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+							? "text-emerald-500 font-medium"
+							: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
 							}`}
 					>
-						<FaStore/>
+						<FaStore />
 					</Link>
 
 					<Link
 						href="/share"
 						onClick={() => setActiveLink("share")}
 						className={`flex text-xl justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "share"
-								? "text-emerald-500 font-medium"
-								: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+							? "text-emerald-500 font-medium"
+							: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
 							}`}
 					>
 						<FaShareSquare />

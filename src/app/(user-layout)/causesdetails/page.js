@@ -8,18 +8,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-// const AllCauses = async () => {
-// 	let data = await fetch("/api/causes");
-// 	data = await data.json();
-// 	if (data.success) {
-// 		return data.result;
-// 	} else {
-// 		return { success: false };
-// 	}
-// };
+
 
 export default function Page() {
-	// const causes = await AllCauses();
 
 
 	const [causes, setCauses] = useState([]);

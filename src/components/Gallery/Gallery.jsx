@@ -14,7 +14,7 @@ const Gallery = () => {
 	return (
 		<>
 			<section>
-				<div className="container mx-auto mt-20">
+				<div id="gallery" className="container mx-auto mt-20">
 					<h2 className="text-center pt-20 pb-6 text-5xl lg:max-w-4xl font-bold mx-auto">
 						Our <span className="text-blue-800">Gallery</span>
 					</h2>
