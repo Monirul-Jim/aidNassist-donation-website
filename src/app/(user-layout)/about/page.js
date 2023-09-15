@@ -7,7 +7,7 @@ import OurMission from "@/components/OurMission/OurMission";
 import HomeBanner from "@/components/HomeBanner/HomeBanner";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import Partner from "@/components/Partner/Partner";
-import TextToSpeech from "@/components/TextSpeech/TextSpeech";
+import TextToSpeech from "@/components/TextToSpeech/TextToSpeech";
 
 
 export const metadata = {
@@ -18,7 +18,7 @@ export const metadata = {
 const About = () => {
 	return (
 		<>
-			<TextToSpeech text="Welcome to About Us" ></TextToSpeech>
+			<TextToSpeech text={"Welcome to About Page"}></TextToSpeech> 
 			<CommonBanner PageTittle={"About"} color={"Us"}></CommonBanner>
 			<div className="p-2 md:p-0">
 
