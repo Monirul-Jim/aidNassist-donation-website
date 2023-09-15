@@ -15,7 +15,7 @@ const Commandvoice = () => {
   const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'en-In' });
   const stopListening = () => SpeechRecognition.stopListening();
 
-  const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition();
+  const { transcript } = useSpeechRecognition();
 
 
   useEffect(() => {
@@ -51,10 +51,10 @@ const Commandvoice = () => {
   };
 
 
-  if (!browserSupportsSpeechRecognition) {
-    alert("No Browser support Commander");
-    return
-  }
+  // if (!browserSupportsSpeechRecognition) {
+  //   alert("No Browser support Commander");
+  //   return
+  // }
 
 
 
