@@ -21,10 +21,10 @@ const MessagingButton = () => {
             {isClicked && (
                 <div className="bg-white p-4 rounded-lg shadow-md mt-2">
                     <div className="flex space-x-4">
-                        <div className="text-2xl text-blue-500">
+                        <div className="text-2xl mb-40 text-blue-500">
                             <FacebookMessage></FacebookMessage>
                         </div>
-                        <div className="text-2xl text-green-600">
+                        <div className="text-2xl mt-40 text-green-600">
                             <WhatsappAPK></WhatsappAPK>
                         </div>
                     </div>
