@@ -6,7 +6,6 @@ import useClipboard from 'react-use-clipboard';
 import { BsFillMicFill } from 'react-icons/bs';
 import { SiConvertio } from 'react-icons/si';
 import robo from "../../../public/Gallery/robo.gif"
-import Swal from 'sweetalert2';
 import Image from 'next/image';
 
 const Commandvoice = () => {
@@ -30,27 +29,22 @@ const Commandvoice = () => {
   const handleCommand = (command) => {
     console.log("Cheak it Command",command)
     if (command === 'go to about') {
-      // Use window.location to navigate to the "about" route
       window.location.href = '/about';
     }
    else if (command === 'go to contact') {
-      // Use window.location to navigate to the "about" route
       window.location.href = '/contactus';
     }
 
     else if (command === 'go to feedback') {
-      // Use window.location to navigate to the "about" route
       window.location.href = '/feedback';
     }
 
     else if (command === 'go to event') {
-      // Use window.location to navigate to the "about" route
       window.location.href = '/event';
     }
     
     
     else if (command === 'copy text') {
-      // Copy the transcript text to the clipboard
       setCopyTxt(transcript);
       setCopied(true);
     }
@@ -58,11 +52,7 @@ const Commandvoice = () => {
   
 
   if (!browserSupportsSpeechRecognition) {
-    return Swal.fire(
-      "No Browser support Commander",
-      "You clicked the button!",
-      "success"
-    );
+    return alert("No Browser support Commander");
   }
 
 
