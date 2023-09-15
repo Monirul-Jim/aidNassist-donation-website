@@ -7,6 +7,7 @@ import useAuth from "@/hooks/useAuth";
 import { useTheme } from "next-themes";
 import "./Navbar.css";
 import { FaShareSquare, FaStore } from "react-icons/fa";
+import Nav from "./Nav";
 
 const Navbar = () => {
 	const { user, logout } = useAuth();
@@ -533,6 +534,8 @@ const Navbar = () => {
 							</Link>
 						)}
 					</div>
+
+					<Nav></Nav>
 				</div>
 			</nav>
 		</div>

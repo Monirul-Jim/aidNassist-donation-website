@@ -4,7 +4,7 @@ import 'regenerator-runtime/runtime';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import useClipboard from 'react-use-clipboard';
 import { BsFillMicFill } from 'react-icons/bs';
-import { SiConvertio } from 'react-icons/si';
+// import { SiConvertio } from 'react-icons/si';
 import robo from "../../../public/Gallery/robo.gif"
 import Image from 'next/image';
 
@@ -34,6 +34,9 @@ const Commandvoice = () => {
     else if (command === 'go to contact') {
       window.location.href = '/contactus';
     }
+    else if (command === 'go to home') {
+      window.location.href = '/';
+    }
 
     else if (command === 'go to feedback') {
       window.location.href = '/feedback';
@@ -61,11 +64,14 @@ const Commandvoice = () => {
 
   return (
     <>
-      <div className='mt-5'>
-        <h1>
-          Speech to Text Converter <SiConvertio />
-        </h1>
-        <p className='text-4xl text-center mt-4 font-bold'>Click and Command for Route Change</p>
+      <div className='mt-24 mb-6 text-center'>
+        {/* <div className='flex justify-center items-center gap-2'>
+          <h1 className='text-center'>
+            Speech to Text Converter
+          </h1>
+          <SiConvertio />
+        </div> */}
+        <p className='text-4xl text-center my-4 font-bold text-green-300'>Command for Change Route</p>
         <div onClick={() => setCopyTxt(transcript)}>{transcript}</div>
         <div className='justify-center flex mt-3'>
 
@@ -74,15 +80,6 @@ const Commandvoice = () => {
           </button>
           <span><Image className='rounded-full border-4 border-green-400' width={100} height={100} src={robo} alt="No Image"></Image></span>
 
-          {/* <button onClick={stopListening}>
-            <BsFillMicMuteFill /> Stop
-          </button> */}
-
-
-          {/* <button onClick={setCopied}>
-            <BiSolidCopyAlt />
-            {isCopied ? ' Copied' : ' Copy to clipboard'}
-          </button> */}
         </div>
       </div>
     </>

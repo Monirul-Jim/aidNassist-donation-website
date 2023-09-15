@@ -249,18 +249,18 @@ const Store = () => {
 
                         {displayedItems.map((item) =>
                             <div key={item._id} className="mx-auto" >
-                                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                     <a href="#">
-                                        <Image width={500} height={500} class="rounded-t-lg w-[500px] h-[400px]" src={item.picture} alt="no image" />
+                                        <Image width={500} height={500} className="rounded-t-lg w-[500px] h-[400px]" src={item.picture} alt="no image" />
                                     </a>
-                                    <div class="p-5">
-                                        <h2 class="mb-2 text-3xl font-bold  text-blue-500 dark:text-white">{item.name}</h2>
+                                    <div className="p-5">
+                                        <h2 className="mb-2 text-3xl font-bold  text-blue-500 dark:text-white">{item.name}</h2>
 
                                         <div className="flex items-center justify-between font-semibold">
-                                            <p class="mb-3 text-gray-700 dark:text-gray-400">
+                                            <p className="mb-3 text-gray-700 dark:text-gray-400">
                                                 <span className="">Category: </span>
                                                 {item.category}</p>
-                                            <p class="mb-3 text-gray-700 dark:text-gray-400">
+                                            <p className="mb-3 text-gray-700 dark:text-gray-400">
                                                 <span className="">Price: $</span>
                                                 {item.price}</p>
                                         </div>
@@ -268,7 +268,7 @@ const Store = () => {
                                             <Star value={item.ratings}></Star>
                                         </div>
 
-                                        <Link href={`store-items/${item._id}`} class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-300 rounded-lg hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-400 dark:hover:bg-green-500 dark:focus:ring-green-800">
+                                        <Link href={`store-items/${item._id}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-300 rounded-lg hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-400 dark:hover:bg-green-500 dark:focus:ring-green-800">
                                             Details  <FaArrowRight className="ml-2" />
                                         </Link>
                                     </div>

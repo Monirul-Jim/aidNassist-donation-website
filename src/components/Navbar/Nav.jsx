@@ -28,7 +28,7 @@ const Nav = () => {
    
 
     return (
-        <div className='flex justify-end mt-24' id="google_translate_element">
+        <div className='flex justify-end ' id="google_translate_element">
             {/* <button className='text-xl bg-slate-400'>Translate</button> */}
             {/* Trigger the language dropdown */}
             <button onClick={openTranslateDropdown}></button>
