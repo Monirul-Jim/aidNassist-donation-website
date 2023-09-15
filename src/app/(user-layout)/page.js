@@ -11,6 +11,7 @@ import Testimonial from "@/components/Testimonial/Testimonial";
 import DonatePayment from "@/pages/donatemoney/money";
 import CountDown from "@/components/CountDown/CountDown";
 import TextToSpeech from "@/components/TextToSpeech/TextToSpeech";
+import Commandvoice from "../Commandvoice/Commandvoice";
 
 export const metadata = {
 	title: 'AidNAssist | Home',
@@ -26,6 +27,7 @@ export default function Home() {
 		<div>
 			{/* here all function give here */}
 			<TextToSpeech text={"Welcome to AidNassits"}></TextToSpeech>
+			<Commandvoice></Commandvoice>
 			<HomeSlider></HomeSlider>
 			<DonatePayment/>
 			<DonateNow/>
