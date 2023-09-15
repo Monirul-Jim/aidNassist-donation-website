@@ -131,10 +131,15 @@ const DashboardSidebar = () => {
                                     <FaUserShield className="text-xl" /> Admin
                                     Dashboard
                                 </h2>
-                                <li className="mb-3 dark:text-white pt-6 lg:text-black text-semibold text-base flex gap-3 items-center">
-                                    <Link href="/dashboard/manageclasses">
-                                        <FaIdCardAlt className="text-xl text-lime-700" />
-                                        Manage Users
+                                <li>
+                                    <Link
+                                        href="/dashboard/allroles"
+                                        className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                                    >
+                                        <MdEventNote className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></MdEventNote>
+                                        <span className="flex-1 ml-3 whitespace-nowrap">
+                                            Manage Users
+                                        </span>
                                     </Link>
                                 </li>
                                 <li className="mb-3 dark:text-white pt-6 lg:text-black text-semibold text-base flex gap-3 items-center">
@@ -213,7 +218,7 @@ const DashboardSidebar = () => {
 										<span className="ml-3">Home board</span>
 									</Link>
 								</li> */}
-                                <li>
+                                {/* <li>
                                     <Link
                                         href="/dashboard/allroles"
                                         className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
@@ -223,7 +228,7 @@ const DashboardSidebar = () => {
                                             Manage Users
                                         </span>
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li>
                                     <Link
                                         href="/dashboard/selectedEvents"

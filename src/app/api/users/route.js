@@ -23,3 +23,12 @@ export async function POST(request) {
 	const result = await user.save();
 	return NextResponse.json({ result, success: true });
 }
+
+
+export const DELETE = async (request, content) => {
+    const user_email = content.params.email;
+    const findAdata = { email: user_email }
+    await mongoose.connect(connectionSrt);
+    const result = await User.deleteOne(findAdata)
+    return NextResponse.json({ result, success: true })
+}

@@ -10,8 +10,10 @@ const testimonialPage = () => {
 				PageTittle={"frequently ask"}
 				color={"question"}
 			></CommonBanner>
-			<Faq></Faq>
-			<Partner></Partner>
+			<div className="mx-2 md:mx-0">
+				<Faq></Faq>
+				<Partner></Partner>
+			</div>
 		</>
 	);
 };

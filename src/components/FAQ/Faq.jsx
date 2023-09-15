@@ -14,8 +14,8 @@ import "./Faq.css";
 
 const Faq = () => {
 	return (
-		<div className="py-16 mt-10 md:flex gap-10 bg-white max-w-7xl mx-auto">
-			<div className="w-[45%]">
+		<div className="pt-16 md:flex gap-10 bg-white max-w-7xl mx-auto">
+			<div className="w-full md:w-[45%]">
 				<Image
 					width="300"
 					height="200"
@@ -24,7 +24,7 @@ const Faq = () => {
 					alt="faq image"
 				/>
 			</div>
-			<div className="w-[55%] pr-0 md:pr-16 mt-5 md:mt-0">
+			<div className="w-full md:w-[55%] pr-0 md:pr-16 mt-5 md:mt-0">
 				<Accordion>
 					<AccordionItem>
 						<AccordionItemHeading>

@@ -1,16 +1,14 @@
 "use client"
 import CommonBanner from "@/components/CommonBanner/CommonBanner";
 import EventCard from "@/components/EventCard/EventCard";
+import Gallery from "@/components/Gallery/Gallery";
+import Partner from "@/components/Partner/Partner";
 import TextToSpeech from "@/components/TextToSpeech/TextToSpeech";
 import { useEffect, useState } from "react";
-import { ProgressBar } from "react-loader-spinner"
-
 
 
 const EventPage = () => {
-	const [events, setEvents] = useState([]);
-	const [loading, setLoading] = useState(true);
-
+	const [events, setEvents] = useState([])
 
 	useEffect(() => {
 		fetch('/api/events')
@@ -19,51 +17,21 @@ const EventPage = () => {
 	}, [])
 
 
-
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			setLoading(false);
-		}, 3000);
-
-		return () => clearTimeout(timer);
-	}, []);
-
-
 	return (
 		<>
-		<TextToSpeech text={"Welcome to Event Page"}></TextToSpeech>
-			{loading ?
+		 <TextToSpeech text={"Welcome to Event Page"}></TextToSpeech> 
+			<CommonBanner PageTittle={"Our"} color={"Event"}></CommonBanner>
+			<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-20 px-2 lg:px-0">
+				{
+					events.map(event => <EventCard
+						key={event._id}
+						event={event}
+					></EventCard>)
+				}
 
-				<div className="flex items-center justify-center">
-					<ProgressBar
-						height="80"
-						width="80"
-						ariaLabel="progress-bar-loading"
-						wrapperStyle={{}}
-						wrapperClass="progress-bar-wrapper"
-						borderColor='green'
-						barColor='#51E5FF'
-					/>
-
-				</div>
-				:
-				<>
-					<CommonBanner PageTittle={"Our"} color={"Event"}></CommonBanner>
-					<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 my-16 px-2 lg:px-0">
-						{
-							events.map(event => <EventCard
-								key={event._id}
-								event={event}
-							></EventCard>)
-						}
-
-					</div>
-
-				</>
-			}
-
-
-
+			</div>
+			<Gallery></Gallery>
+			<Partner></Partner>
 		</>
 	);
 };

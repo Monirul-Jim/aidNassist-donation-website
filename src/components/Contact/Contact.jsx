@@ -35,23 +35,21 @@ const Contact = () => {
 	};
 
 	return (
-		<section className="my-10">
-			<div>
-				<h1 className="text-center font-bold mt-20 pb-10 text-5xl text-gray-600  mb-5">
-					Contact Us
-				</h1>
-			</div>
+		<section className="mt-20">
 			<div className="md:flex gap-4 lg:gap-14 justify-center items-center max-w-7xl mx-auto">
-				<div className="lg:w-[650px] md:w-[550px] w-[400px] h-96 lg:h-[500px] rounded-xl mx-auto lg:mt-9">
+				<div className="lg:w-[650px] md:w-[550px] w-full h-96 lg:h-[500px] rounded-xl mx-auto lg:mt-9">
 					<Image width={750} height={550} src={contactimage} alt="" />
 				</div>
-				<div className="lg:ms-10 md:ms-0 lg:w-[50%] md:w-[70%]">
+				<div className="lg:ms-10 md:ms-0 lg:w-[50%] md:w-[70%] w-full">
+					<h2 className="w-[90%] mx-auto mb-6 text-2xl md:text-4xl font-semibold">Contact <span className="text-green-500">Now</span></h2>
 					<div className="bg-gray-50 border-4 p-8 border-green-400  shadow-2xl w-[90%] mx-auto" style={{ borderRadius: '0px 55px 0px 55px' }}>
+
 						<form
 							className="w-[100%] justify-center mt-3"
 							ref={form}
 							onSubmit={sendEmail}
 						>
+
 							<div className="font-bold mt-2 dark:text-green-400">
 								<label>Name</label>
 							</div>
@@ -71,7 +69,7 @@ const Contact = () => {
 									className="w-full border rounded-md border-emerald-500 p-2 text-black"
 									type="email"
 									name="from_email"
-                                    autocomplete="email"
+									autocomplete="email"
 								/>
 							</div>
 							<div className="font-bold mt-3 dark:text-green-400 ">
