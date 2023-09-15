@@ -49,6 +49,7 @@
     "recharts": "^2.8.0",
     "regenerator-runtime": "^0.14.0",
     "server-only": "^0.0.1",
+    "sslcommerz": "^1.7.0",
     "stripe": "^13.3.0",
     "sweetalert2": "^11.7.22",
     "swiper": "^10.2.0",

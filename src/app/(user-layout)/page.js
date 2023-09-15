@@ -11,6 +11,7 @@ import Testimonial from "@/components/Testimonial/Testimonial";
 import DonatePayment from "@/pages/donatemoney/money";
 import CountDown from "@/components/CountDown/CountDown";
 import TextToSpeech from "@/components/TextToSpeech/TextToSpeech";
+import LetsChange from "@/components/LetsChange/LetsChange";
 
 export const metadata = {
 	title: 'AidNAssist | Home',
@@ -30,6 +31,7 @@ export default function Home() {
 			<DonatePayment/>
 			<DonateNow/>
 			<Misson></Misson>
+			<LetsChange />
 			<BecomeVolunteer />
 			<Volunteers />
 			<Causes />
