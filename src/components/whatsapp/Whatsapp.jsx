@@ -26,7 +26,7 @@ export default function WhatsappAPK() {
 
   return (
       <>
-      <div className="fixed  bottom-20 right-10 w-12 border-green-400 rounded-full z-50">
+      <div className="fixed  bottom-24 right-10 w-14 border-green-400 rounded-full z-50">
         <Link href="https://wa.me/88001951600545"> 
          <Image className='border-green-400 rounded-full' src={whatsapp} alt='pic not found'></Image>
         </Link>
