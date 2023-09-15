@@ -10,7 +10,7 @@ import Misson from "@/components/Mission/Misson";
 import Testimonial from "@/components/Testimonial/Testimonial";
 import DonatePayment from "@/pages/donatemoney/money";
 import CountDown from "@/components/CountDown/CountDown";
-import VoiceDemo from "@/components/voicecomponents/Voice";
+import TextToSpeech from "@/components/TextToSpeech/TextToSpeech";
 
 export const metadata = {
 	title: 'AidNAssist | Home',
@@ -25,8 +25,7 @@ export default function Home() {
 	return (
 		<div>
 			{/* here all function give here */}
-			
-			<VoiceDemo text={"Welcome to Aid N Assist"} ></VoiceDemo>
+			<TextToSpeech text={"Welcome to AidNassits"}></TextToSpeech>
 			<HomeSlider></HomeSlider>
 			<DonatePayment/>
 			<DonateNow/>

@@ -1,7 +1,7 @@
 "use client"
 import CommonBanner from "@/components/CommonBanner/CommonBanner";
 import EventCard from "@/components/EventCard/EventCard";
-import VoiceDemo from "@/components/voicecomponents/Voice";
+import TextToSpeech from "@/components/TextToSpeech/TextToSpeech";
 import { useEffect, useState } from "react";
 import { ProgressBar } from "react-loader-spinner"
 
@@ -31,7 +31,7 @@ const EventPage = () => {
 
 	return (
 		<>
-		<VoiceDemo text={"Welcome to Event Page"} ></VoiceDemo>
+		<TextToSpeech text={"Welcome to Event Page"}></TextToSpeech>
 			{loading ?
 
 				<div className="flex items-center justify-center">

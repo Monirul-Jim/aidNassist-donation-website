@@ -43,7 +43,6 @@
     "react-tabs": "^6.0.2",
     "react-text-modifier": "^1.0.0",
     "react-to-print": "^2.14.13",
-    "react-voice-components": "^1.0.0",
     "recharts": "^2.8.0",
     "server-only": "^0.0.1",
     "stripe": "^13.3.0",
