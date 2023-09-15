@@ -208,12 +208,7 @@ const DashboardSidebar = () => {
                                         <span className="flex-1 ml-3 whitespace-nowrap">FeedBacks</span>
                                     </Link>
                                 </li>
-                                {/* <li>
-                                    <Link href="/dashboard/dashBoardsslBills" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                        <FaIdCardAlt className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaIdCardAlt>
-                                        <span className="flex-1 ml-3 whitespace-nowrap">Your Donate</span>
-                                    </Link>
-                                </li> */}
+                                
 
                                 {/* <li>
 									<Link
