@@ -15,3 +15,23 @@ export default function WhatsappAPK() {
   )
 }
 
+// 'use client'
+// import Image from 'next/image'
+// import Link from 'next/link'
+// import React from 'react'
+// import whatsapp from "../../../public/Gallery/whats-appgif.gif"
+
+
+// export default function WhatsAppOthersContact() {
+
+//   return (
+//       <>
+//       <div className="fixed  bottom-20 right-10 w-12 border-green-400 rounded-full z-50">
+//         <Link href="https://wa.me/88001951600545"> 
+//          <Image className='border-green-400 rounded-full' src={whatsapp} alt='pic not found'></Image>
+//         </Link>
+//       </div>
+//       </>
+    
+//   )
+// }

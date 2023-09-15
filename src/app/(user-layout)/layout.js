@@ -1,8 +1,9 @@
-import FacebookMessage from "@/components/FacebookMessage/FacebookMessage";
+// import FacebookMessage from "@/components/FacebookMessage/FacebookMessage";
 import Footer from "@/components/Footer/Footer";
+import MessagingButton from "@/components/MessagingButton/MessagingButton";
 import Navbar from "@/components/Navbar/Navbar";
 import Notify from "@/components/Notify/Notify";
-import WhatsappAPK from "@/components/whatsapp/Whatsapp";
+// import WhatsappAPK from "@/components/whatsapp/Whatsapp";
 import Providers from "@/providers";
 import { Toaster } from "react-hot-toast";
 import Commandvoice from "../Commandvoice/Commandvoice";
@@ -13,8 +14,9 @@ const UserLayout = ({ children }) => {
 			<Providers>
 				<Navbar />
 				<Commandvoice></Commandvoice>
-				<FacebookMessage/>
-				<WhatsappAPK/>
+				{/* <FacebookMessage/>
+				<WhatsappAPK/> */}
+				<MessagingButton/>
 				<Notify></Notify>
 				{children}
 				<Footer />
