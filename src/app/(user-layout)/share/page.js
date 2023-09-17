@@ -53,7 +53,7 @@ export default class App extends Component {
     return (
       <div
         style={{
-          background: '#0000',
+          background: '#CFEFD8',
           width: '100%',
         }}
       >
@@ -61,7 +61,7 @@ export default class App extends Component {
 
       <div className='grid grid-cols-3 gap-10 py-5 justify-center mx-auto place-items-center  '>
         {/* start */}
-      <div className='p-5 shadow-green-200 shadow-2xl w-28  rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+      <div className='p-5 shadow-white shadow-2xl w-28  rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
       <FacebookShareButton
           url={shareUrl}
           quote={'Facebook'}
@@ -73,7 +73,7 @@ export default class App extends Component {
         <h1 className='text-center'>FaceBook</h1>
       </div>
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <WhatsappShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -84,7 +84,7 @@ export default class App extends Component {
         <h1>WhatsApp</h1>
        </div>
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <EmailShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -94,7 +94,7 @@ export default class App extends Component {
         </EmailShareButton>
         <h1>Mail</h1>
        </div>
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <HatenaShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -105,7 +105,7 @@ export default class App extends Component {
         <h1>Hatena</h1>
        </div>
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <FacebookMessengerShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -116,7 +116,7 @@ export default class App extends Component {
         <h1>Messenger</h1>
        </div>
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <InstapaperShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -126,7 +126,7 @@ export default class App extends Component {
         </InstapaperShareButton>
         <h1>Instapaper</h1>
        </div>
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <LineShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -136,7 +136,7 @@ export default class App extends Component {
         </LineShareButton>
         <h1>Line</h1>
        </div>
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <LinkedinShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -146,7 +146,7 @@ export default class App extends Component {
         </LinkedinShareButton>
         <h1>Linkedin</h1>
        </div>
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <MailruShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -157,7 +157,7 @@ export default class App extends Component {
         <h1>Mailru</h1>
        </div>
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <LivejournalShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -168,7 +168,7 @@ export default class App extends Component {
         <h1>LiveJournal</h1>
        </div>
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <OKShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -178,7 +178,7 @@ export default class App extends Component {
         </OKShareButton>
         <h1>Ok</h1>
        </div>
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <PinterestShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -188,7 +188,7 @@ export default class App extends Component {
         </PinterestShareButton>
         <h1>Pinterest</h1>
        </div>
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <PocketShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -198,7 +198,7 @@ export default class App extends Component {
         </PocketShareButton>
         <h1>Pocket</h1>
        </div>
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <RedditShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -209,7 +209,7 @@ export default class App extends Component {
         <h1>Reddit</h1>
        </div>
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <TelegramShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -220,7 +220,7 @@ export default class App extends Component {
         <h1>Telagram</h1>
        </div>
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <TumblrShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -231,7 +231,7 @@ export default class App extends Component {
         <h1>Tumblr</h1>
        </div>
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <TwitterShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -242,7 +242,7 @@ export default class App extends Component {
         <h1>Twitter</h1>
        </div>
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <ViberShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -253,7 +253,7 @@ export default class App extends Component {
         <h1>Viber</h1>
        </div>
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <VKShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -264,7 +264,7 @@ export default class App extends Component {
         <h1>Vk</h1>
        </div>
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <WorkplaceShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}
@@ -277,7 +277,7 @@ export default class App extends Component {
 
       
 
-       <div className='p-5 shadow-green-200 shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-green-200'>
+       <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
        <WeiboShareButton
           url={shareUrl}
           quote={'Title or jo bhi aapko likhna ho'}

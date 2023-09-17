@@ -1,37 +1,39 @@
+
+
 // 'use client'
+// import Image from 'next/image'
+// import Link from 'next/link'
 // import React from 'react'
-// import { FloatingWhatsApp } from 'react-floating-whatsapp'
+// import whatsapp from "../../../public/Gallery/whats-appgif.gif"
+
 
 // export default function WhatsappAPK() {
 
 //   return (
-//       <FloatingWhatsApp 
-//       phoneNumber="+880-01752710189"
-//       accountName="AirAssists"
-//       avatar="https://i.ibb.co/4PHQVY8/heart.png"
-//       placeholder="text your Massage"
-//       style={{ backgroundColor: 'green', color: 'black' }}
-//       />
+//       <>
+//       <div className="fixed  bottom-24 right-10 w-14 border-green-400 rounded-full z-50">
+//         <Link href="https://wa.me/88001951600545"> 
+//          <Image className='border-green-400 rounded-full' src={whatsapp} alt='pic not found'></Image>
+//         </Link>
+//       </div>
+//       </>
+    
 //   )
 // }
 
-'use client'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import whatsapp from "../../../public/Gallery/whats-appgif.gif"
 
+import React from 'react';
+import whatsapp from '../../../public/Gallery/whats-appgif.gif'; // Assuming you have an image for WhatsApp
+import Image from 'next/image';
 
 export default function WhatsappAPK() {
-
   return (
-      <>
-      <div className="fixed  bottom-24 right-10 w-14 border-green-400 rounded-full z-50">
-        <Link href="https://wa.me/88001951600545"> 
-         <Image className='border-green-400 rounded-full' src={whatsapp} alt='pic not found'></Image>
-        </Link>
+    <>
+      <div className="fixed bottom-24 right-10 w-14 border-green-400 rounded-full z-50">
+        <a href="https://wa.me/88001951600545" target="_blank" rel="noopener noreferrer">
+          <Image className="border-green-400 rounded-full" src={whatsapp} alt="WhatsApp" />
+        </a>
       </div>
-      </>
-    
-  )
+    </>
+  );
 }
