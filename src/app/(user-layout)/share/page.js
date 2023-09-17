@@ -70,7 +70,7 @@ export default class App extends Component {
           <FacebookIcon size={40} round={true} />
          
         </FacebookShareButton>
-        <h1 className='text-center'>FaceBook</h1>
+        <h1 className='text-center'>FACEBOOK</h1>
       </div>
 
        <div className='p-5 shadow-white shadow-2xl w-28 rounded-2xl  text-center flex flex-col items-center hover:bg-white'>
