@@ -6,14 +6,12 @@ import Telegram from "@/components/Telegram/Telegram";
 import WhatsappAPK from "@/components/whatsapp/Whatsapp";
 import Providers from "@/providers";
 import { Toaster } from "react-hot-toast";
-import Commandvoice from "../Commandvoice/Commandvoice";
 
 const UserLayout = ({ children }) => {
 	return (
 		<div>
 			<Providers>
 				<Navbar />
-				<Commandvoice></Commandvoice>
 				<FacebookMessage/>
 				<Telegram/>
 				<WhatsappAPK/>

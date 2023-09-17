@@ -13,7 +13,7 @@ const HomeSlider = () => {
 		Aos.init({ duration: 1000 });
 	}, []);
 	return (
-		<section className="main-slider" data-aos="fade-up"
+		<section className="main-slider mt-20" data-aos="fade-up"
 			data-aos-anchor-placement="top-bottom">
 			<Swiper
 				slidesPerView={1}

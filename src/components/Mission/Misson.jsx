@@ -14,7 +14,7 @@ import 'aos/dist/aos.css';
 const Misson = () => {
 
 	useEffect(() => {
-		Aos.init({ duration: 1000 });
+		Aos.init({ duration: 1600 });
 	}, []);
 
 

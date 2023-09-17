@@ -20,7 +20,6 @@ const SslDonate = ({ category }) => {
         setLoading(true);
 
         try {
-            // Make a POST request to create payment
             const response = await axios.post("/api/create-payment", {
                 price: selectedPrice,
                 email: user?.email,
@@ -37,18 +36,8 @@ const SslDonate = ({ category }) => {
     };
     return (
         <div>
-            {/* {
-                donate?.map((e, index) => <div key={index}>
 
-
-                    <button onClick={() => handlePriceClick(e.price)}> {e.price}</button>
-
-
-                </div>)
-
-            } */}
-
-            <div className='grid grid-cols-3'>
+            <div className='grid grid-cols-1 lg:grid-cols-3'>
                 {donate?.map((e, index) => (
                     <button
                         key={index}
@@ -70,7 +59,7 @@ const SslDonate = ({ category }) => {
                 <button
                     onClick={handleDonate}
                     disabled={loading}
-                    className="block text-white mt-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="block text-white mt-4 bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-green-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                     type="button"
                 >
 
@@ -79,17 +68,12 @@ const SslDonate = ({ category }) => {
                 </button>
             ) : (
                 <Link href="/login" legacyBehavior>
-                    <button className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <button className="block text-white bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-green-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                         Login
                     </button>
                 </Link>
             )}
 
-
-            {/* <button className="inline-flex items-center px-3 mt-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Donate
-             
-            </button> */}
         </div>
     );
 };

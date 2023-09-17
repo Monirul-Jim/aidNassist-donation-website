@@ -2,9 +2,9 @@ import mongoose from 'mongoose';
 
 const storepaymentsModel = new mongoose.Schema({
     email: String,
-    transactionId: String,
+    tran_id: String,
     price: Number,
-    date: Date,
+    status: String,
 });
 
 const StorePayments =mongoose.models.storepayments || mongoose.model('storepayments', storepaymentsModel);

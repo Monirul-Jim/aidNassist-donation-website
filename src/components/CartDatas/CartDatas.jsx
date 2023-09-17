@@ -12,7 +12,7 @@ const CartDatas = () => {
 
     const cartData = useCart();
     const [isLoading, setIsLoading] = useState(false);
-    const {user} = useAuth()
+    const { user } = useAuth()
 
     if (!Array.isArray(cartData)) {
         return <div>No items in the cart</div>;
@@ -44,11 +44,11 @@ const CartDatas = () => {
 
     const handlePayment = async () => {
         const money = parseFloat(total).toFixed(2);
-        console.log( money);
+        console.log(money);
         try {
-            const { data } = await axios.post("/api/storepayments/payment", {
+            const { data } = await axios.post("/api/storeSslPayments/create-payment", {
                 price: money,
-                email: user.email,
+                email: user?.email
             });
             window.location.href = data.url;
         } catch (error) {
@@ -121,7 +121,7 @@ const CartDatas = () => {
             </div> */}
 
 
-{isLoading ?
+            {isLoading ?
                 <div className="text-center">
                     <div role="status">
                         <svg aria-hidden="true" className="inline w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-green-500" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">

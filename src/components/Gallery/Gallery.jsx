@@ -9,12 +9,24 @@ import ImageSix from "../../../public/Gallery/gallery-6.jpg";
 import ImageSeven from "../../../public/Gallery/gallery-7.jpg";
 import ImageEight from "../../../public/Gallery/gallery-8.jpg";
 import Image from "next/image";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const Gallery = () => {
+
+
+	useEffect(() => {
+		Aos.init({ duration: 2500 });
+	}, []);
+
+
+
+
 	return (
 		<>
 			<section>
-				<div className="container mx-auto mt-20">
+				<div className="container mx-auto mt-20" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
 					<h2 className="text-center pb-3 lg:pb-6 text-3xl lg:text-5xl lg:max-w-4xl font-bold mx-auto">
 						Our <span className="text-blue-800">Gallery</span>
 					</h2>

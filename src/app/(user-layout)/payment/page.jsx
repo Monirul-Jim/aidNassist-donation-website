@@ -1,5 +1,6 @@
 'use client'
 import PricingCard from "@/components/BecomeVolunteer/PricingCard";
+import DonatePayment from "@/pages/donatemoney/money";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -29,9 +30,12 @@ const Pricing = () => {
                 <p className="mt-2 text-4xl font-bold tracking-tight dark:text-white text-gray-800 sm:text-5xl">Please Raise Your Hand</p>
                 <p>Donate Now</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1040px] items-center mx-12 md:mx-auto my-40">
-                {prices && prices.map((price, index) => <PricingCard key={price.id} price={price} index={index}></PricingCard>)}
+            <div className="my-10">
+                <DonatePayment/>
             </div>
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1040px] items-center mx-12 md:mx-auto my-40">
+                {prices && prices.map((price, index) => <PricingCard key={price.id} price={price} index={index}></PricingCard>)}
+            </div> */}
         </div>
     );
 };

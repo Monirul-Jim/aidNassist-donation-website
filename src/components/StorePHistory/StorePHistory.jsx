@@ -64,7 +64,7 @@ const StorePHistory = () => {
                                         <th className="py-2 text-xs md:text-base  text-left">Mail</th>
                                         <th className="py-2 text-xs md:text-base  text-left">Amounts</th>
                                         <th className="py-2 text-xs md:text-base hidden md:block  text-left">Transaction ID</th>
-                                        <th className="py-2 text-xs text-right md:text-center md:text-base ">Date</th>
+                                        <th className="py-2 text-xs text-right md:text-center md:text-base ">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -74,8 +74,8 @@ const StorePHistory = () => {
 
                                             <td className="py-3 text-xs md:text-base ">{item.email}</td>
                                             <td className="py-3 text-xs md:text-base ">${(item.price / 100).toFixed(2)}</td>
-                                            <td className="py-3 text-xs md:text-base hidden md:block ">{item.transactionId}</td>
-                                            <td className="py-3 text-xs text-right md:text-left md:text-base ">{new Date(item.date).toLocaleString()}</td>
+                                            <td className="py-3 text-xs md:text-base hidden md:block ">{item.tran_id}</td>
+                                            <td className="py-3 text-xs text-right md:text-center md:text-base text-green-300">{item.status}</td>
                                         </tr>
                                     ))}
                                 </tbody>

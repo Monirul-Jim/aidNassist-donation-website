@@ -1,9 +1,16 @@
 "use client";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const Partner = () => {
+	useEffect(() => {
+		Aos.init({ duration: 2800 });
+	}, []);
+
 	return (
-		<section className="mt-20">
+		<div className="mt-20" data-aos="zoom-in-up">
 			<h2 className="text-2xl lg:text-4xl font-bold text-center pt-0 pb-3">
 				Charity Organization Worked In The Fundraising
 			</h2>
@@ -73,7 +80,7 @@ const Partner = () => {
 					/>
 				</div>
 			</Marquee>
-		</section>
+		</div>
 	);
 };
 

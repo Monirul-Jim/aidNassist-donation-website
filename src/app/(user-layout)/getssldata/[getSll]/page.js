@@ -20,7 +20,7 @@ const GetSllData = (props) => {
     }
     return (
 
-        <div>
+        <div className='my-40'>
             {
                 loading ? <div className="text-center">
                     <div role="status">
@@ -31,7 +31,7 @@ const GetSllData = (props) => {
                         <span className="sr-only">Loading...</span>
                     </div>
                 </div> :
-                    <div className='grid grid-cols-1 lg:grid-cols-3'>
+                    <div className='md:mx-[40%]'>
                         {
                             volunteerData?.map(category => <SslDonate key={category._id} category={category} ></SslDonate>)
                         }

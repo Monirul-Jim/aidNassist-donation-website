@@ -14,7 +14,7 @@ const Volunteers = () => {
 
 	useEffect(() => {
 		getTheAllVolunteersData();
-		Aos.init({ duration: 1500 });
+		Aos.init({ duration: 2200 });
 	}, []);
 
 	const getTheAllVolunteersData = async () => {

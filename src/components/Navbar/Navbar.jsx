@@ -8,6 +8,7 @@ import { useTheme } from "next-themes";
 import "./Navbar.css";
 import { FaShareSquare, FaStore } from "react-icons/fa";
 import Nav from "./Nav";
+import Commandvoice from "@/app/Commandvoice/Commandvoice";
 
 const Navbar = () => {
 	const { user, logout } = useAuth();
@@ -29,12 +30,35 @@ const Navbar = () => {
 	const [navbarTransparent, setNavbarTransparent] = useState(true);
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const [writingDropDown, setWritingDropDown] = useState(false);
+	const [blogDropDown, setBlogDropDown] = useState(false);
+
+	const [contacts, setContacts] = useState(false);
 
 	const toggleDown = () => {
 		setIsDropdownOpen(!isDropdownOpen);
 	};
 	const toggleWriting = () => {
 		setWritingDropDown(!writingDropDown);
+	};
+	const toggleBlogging = () => {
+		setBlogDropDown(!blogDropDown);
+	};
+	const toggleContact = () => {
+		setContacts(!contacts);
+	};
+
+	const handleMouseEnter = () => {
+		setContacts(true);
+	};
+	const handleMouseEnterAbout = () => {
+		setIsDropdownOpen(true);
+	};
+
+	const handleMouseLeave = () => {
+		setContacts(false);
+	};
+	const handleMouseLeaveAbout = () => {
+		setIsDropdownOpen(false);
 	};
 
 	const toggleDropdown = () => {
@@ -230,7 +254,7 @@ const Navbar = () => {
 				<div
 					className={`md:flex items-center md:space-x-6 ${mobileMenuOpen ? "block bg-blue-900" : "hidden"
 						} ${user
-							? "bg-white ml-32 shadow-lg md:bg-transparent p-4"
+							? "ml-32 shadow-lg md:bg-transparent px-4 py-2"
 							: "bg-opacity-40"
 						}`}
 				>
@@ -259,7 +283,7 @@ const Navbar = () => {
 
 
 
-					<div className="relative">
+					<div className="relative" onMouseEnter={handleMouseEnterAbout}>
 						<button
 							id="dropdownNavbarLink"
 							onClick={toggleDown}
@@ -329,46 +353,152 @@ const Navbar = () => {
 											FAQ
 										</Link>
 									</li>
+
 									<li>
-										<Link
-											href="/blog"
-											onClick={() => setActiveLink("blog")}
-											className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "blog"
-												? "text-emerald-500 font-medium"
-												: "text-black md:text-gray-600 bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-												}`}
-										>
-											Blogs
-										</Link>
+										<div className="relative">
+											<button
+												id="dropdownNavbarLink"
+												onClick={toggleBlogging}
+												className="flex items-center justify-between w-full py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-500 md:p-0 md:w-auto dark:text-white font-medium"
+											>
+												Blogs
+												<svg
+													className={`w-2.5 h-2.5 ml-2.5 transition-transform ${blogDropDown ? '-rotate-90' : ''
+														}`}
+													aria-hidden="true"
+													xmlns="http://www.w3.org/2000/svg"
+													fill="none"
+													viewBox="0 0 10 6"
+												>
+													<path
+														stroke="currentColor"
+														strokeLinecap="round"
+														strokeLinejoin="round"
+														strokeWidth="2"
+														d="m1 1 4 4 4-4"
+													/>
+												</svg>
+											</button>
+
+											{blogDropDown && (
+												<div
+													id="dropdownNavbar"
+													className="z-10 absolute top-full md:mt-4 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+												>
+													<ul
+														className="py-2 px-5 text-gray-700 dark:text-gray-400"
+														aria-labelledby="dropdownNavbarLink"
+													>
+														<li>
+															<Link
+																href="/blog"
+																onClick={() => setActiveLink("blog")}
+																className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "blog"
+																	? "text-emerald-500 font-medium"
+																	: "text-black md:text-gray-600 bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+																	}`}
+															>
+																Blogs
+															</Link>
+														</li>
+														<li>
+															<div className="relative">
+																<button
+																	id="dropdownNavbarLink"
+																	onClick={toggleWriting}
+																	className="flex items-center justify-between w-full py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-500 md:p-0 md:w-auto dark:text-white"
+																>
+																	Write a Blog
+																	<svg
+																		className={`w-2.5 h-2.5 ml-2.5 transition-transform ${writingDropDown ? '-rotate-90' : ''
+																			}`}
+																		aria-hidden="true"
+																		xmlns="http://www.w3.org/2000/svg"
+																		fill="none"
+																		viewBox="0 0 10 6"
+																	>
+																		<path
+																			stroke="currentColor"
+																			strokeLinecap="round"
+																			strokeLinejoin="round"
+																			strokeWidth="2"
+																			d="m1 1 4 4 4-4"
+																		/>
+																	</svg>
+																</button>
+
+																{writingDropDown && (
+																	<div
+																		id="dropdownNavbar"
+																		className="z-10 absolute top-full md:mt-4 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+																	>
+																		<ul
+																			className="py-2 px-5 text-gray-700 dark:text-gray-400"
+																			aria-labelledby="dropdownNavbarLink"
+																		>
+																			<li>
+																				<Link
+																					href="/writeblogd"
+																					onClick={() => setActiveLink("writeblogd")}
+																					className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "writeblogd"
+																						? "text-emerald-500 font-medium"
+																						: "text-black md:text-gray-600 bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+																						}`}
+																				>
+																					For Donators
+																				</Link>
+																			</li>
+																			<li>
+																				<Link
+																					href="/writeblogv"
+																					onClick={() => setActiveLink("writeblogv")}
+																					className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "writeblogv"
+																						? "text-emerald-500 font-medium"
+																						: "text-black md:text-gray-600 bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+																						}`}
+																				>
+																					For Volunteers
+																				</Link>
+																			</li>
+																		</ul>
+																	</div>
+																)}
+															</div>
+														</li>
+													</ul>
+												</div>
+											)}
+										</div>
 									</li>
 								</ul>
 							</div>
 						)}
 					</div>
 
-
-
-
 					{/* ------------------------------------------------------- */}
 
 
 
-
-
-
-
-					{/* ----------------------Writing Blog Drop Down---------------------- */}
-					{/* ------------------------------------------------------- */}
-
-					<div className="relative">
+					<Link
+						href="/event"
+						onMouseLeave={handleMouseLeaveAbout}
+						onClick={() => setActiveLink("event")}
+						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "event"
+							? "text-emerald-500 font-medium"
+							: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+							}`}
+					>
+						Event
+					</Link>
+					<div className="relative" onMouseEnter={handleMouseEnter}>
 						<button
 							id="dropdownNavbarLink"
-							onClick={toggleWriting}
-							className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-500 md:p-0 md:w-auto dark:text-white"
+							onClick={toggleContact}
+							className="flex items-center justify-between w-full py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-500 md:p-0 md:w-auto dark:text-white"
 						>
-							Write a Blog
+							Contact
 							<svg
-								className={`w-2.5 h-2.5 ml-2.5 transition-transform ${writingDropDown ? 'rotate-180' : ''
+								className={`w-2.5 h-2.5 ml-2.5 transition-transform ${contacts ? 'rotate-180' : ''
 									}`}
 								aria-hidden="true"
 								xmlns="http://www.w3.org/2000/svg"
@@ -385,7 +515,7 @@ const Navbar = () => {
 							</svg>
 						</button>
 
-						{writingDropDown && (
+						{contacts && (
 							<div
 								id="dropdownNavbar"
 								className="z-10 absolute top-full md:mt-4 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
@@ -396,26 +526,26 @@ const Navbar = () => {
 								>
 									<li>
 										<Link
-											href="/writeblogd"
-											onClick={() => setActiveLink("writeblogd")}
-											className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "writeblogd"
+											href="/feedback"
+											onClick={() => setActiveLink("feedback")}
+											className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "feedback"
 												? "text-emerald-500 font-medium"
-												: "text-black md:text-gray-600 bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+												: "text-black bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
 												}`}
 										>
-											For Donators
+											Feedback
 										</Link>
 									</li>
 									<li>
 										<Link
-											href="/writeblogv"
-											onClick={() => setActiveLink("writeblogv")}
-											className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "writeblogv"
+											href="/contactus"
+											onClick={() => setActiveLink("contactus")}
+											className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "contactus"
 												? "text-emerald-500 font-medium"
-												: "text-black md:text-gray-600 bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
+												: "text-black bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
 												}`}
 										>
-											For Volunteers
+											Contact Us
 										</Link>
 									</li>
 								</ul>
@@ -423,48 +553,9 @@ const Navbar = () => {
 						)}
 					</div>
 
-					{/* ------------------------------------------------------- */}
-
-
 
 					<Link
-						href="/event"
-						onClick={() => setActiveLink("event")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "event"
-							? "text-emerald-500 font-medium"
-							: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-							}`}
-					>
-						Event
-					</Link>
-
-
-
-					<Link
-						href="/feedback"
-						onClick={() => setActiveLink("feedback")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "feedback"
-							? "text-emerald-500 font-medium"
-							: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-							}`}
-					>
-						Feedback
-					</Link>
-
-					<Link
-						href="/contactus"
-						onClick={() => setActiveLink("contactus")}
-						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "contactus"
-							? "text-emerald-500 font-medium"
-							: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
-							}`}
-					>
-						Contact Us
-					</Link>
-
-
-
-					<Link
+						onMouseLeave={handleMouseLeave}
 						href="/store-items"
 						onClick={() => setActiveLink("store-items")}
 						className={`flex justify-end mt-2 md:mt-0 md:inline-block ${activeLink === "store-items"
@@ -472,7 +563,7 @@ const Navbar = () => {
 							: "text-black md:text-white bg-slate-100 md:bg-transparent py-2 rounded-sm pe-3 font-medium"
 							}`}
 					>
-						<FaStore />
+						<div className="flex items-center gap-1">Store <FaStore /></div>
 					</Link>
 
 					<Link
@@ -534,7 +625,7 @@ const Navbar = () => {
 							</Link>
 						)}
 					</div>
-
+					<Commandvoice />
 					<Nav></Nav>
 				</div>
 			</nav>

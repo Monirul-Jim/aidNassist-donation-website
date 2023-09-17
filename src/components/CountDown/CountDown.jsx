@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import CountUp from "react-countup"
 import ScrollTrigger from 'react-scroll-trigger'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 const CountDown = () => {
 
     const [onTheCounter, setOnTheCounter] = useState(false);
@@ -11,12 +13,16 @@ const CountDown = () => {
     const [events, setEvents] = useState([]);
     const [donation, setDonation] = useState([]);
 
+
     useEffect(() => {
         getStorePaymentCount();
         getStripePaymentCount();
         getTheAllVolunteersData();
         getEvents();
         getDonation();
+    }, []);
+    useEffect(() => {
+        Aos.init({ duration: 2400 });
     }, []);
 
 
@@ -77,7 +83,10 @@ const CountDown = () => {
 
     return (
         <ScrollTrigger onEnter={() => setOnTheCounter(true)} onExit={() => setOnTheCounter(false)}>
-            <div className="my-10">
+            <div className="my-10"
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
+            >
 
                 <div className="text-center text-4xl p-10 flex md:flex-row flex-col justify-center items-center gap-10">
                     <div className="border rounded-xl p-8 bg-green-300">

@@ -1,13 +1,21 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { IoIosLink } from "react-icons/io";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 
 const OurTeam = () => {
+	useEffect(() => {
+		Aos.init({ duration: 2600 });
+	}, []);
+
 	return (
 		<section className="mb-10">
-			<div>
+			<div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
 				<h1 className="text-center pb-6 text-5xl lg:max-w-4xl font-bold mx-auto">
 					Our Inspiring Volunteers
 				</h1>

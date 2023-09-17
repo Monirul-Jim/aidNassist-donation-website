@@ -11,7 +11,7 @@ const DonateNow = () => {
 
 
     useEffect(() => {
-        Aos.init({ duration: 1100 });
+        Aos.init({ duration: 1400 });
     }, []);
 
 
