@@ -32,7 +32,7 @@ export async function POST(request) {
         // billing.status = "SUCCESS"
         // await billing.save()
         await sslBill.updateOne({ tran_id }, { status: "success" })
-        return Response.redirect("https://test-another-next-proj.vercel.app/dashboard")
+        return Response.redirect("https://aid-nassist-donation-website.vercel.app/dashboard")
     } catch (error) {
         console.log(error.message);
         // return Response.redirect(`${process.env.DOMAIN}/`);

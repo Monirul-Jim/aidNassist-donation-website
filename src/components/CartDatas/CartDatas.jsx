@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { FaTrashAlt } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const CartDatas = () => {
 
@@ -72,9 +73,9 @@ const CartDatas = () => {
     return (
         <div className=" mt-40">
             <div className="flex justify-around items-center mb-20 mx-5 md:mx-14">
-                <h2 className="text-center font-bold rounded-lg bg-green-300 px-5 py-2">Total Items: {cartData.length}</h2>
-                <h2 className="text-center font-bold rounded-lg bg-green-300 px-5 py-2">Due: ${total}</h2>
-                <button onClick={handlePayment} className="rounded-lg bg-green-300 px-5 py-2 font-bold">Checkout</button>
+                <h2 className="text-center font-bold rounded-lg bg-green-300 dark:bg-black px-5 py-2">Total Items: {cartData.length}</h2>
+                <h2 className="text-center font-bold rounded-lg bg-green-300 dark:bg-black px-5 py-2">Due: ${total}</h2>
+                <button onClick={handlePayment} className="rounded-lg bg-green-300 dark:bg-black px-5 py-2 font-bold">Checkout</button>
             </div>
 
 

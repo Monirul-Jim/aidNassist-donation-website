@@ -21,12 +21,12 @@ const DonateNow = () => {
 
     return (
         <div className="mt-40 mb-10"
-        data-aos="zoom-in-right">
+            data-aos="zoom-in-right">
             <div className="flex justify-center items-center gap-32">
                 <div>
                     <h2 className="text-4xl">They Need Your Help</h2>
                     <p className="max-w-sm my-7">We collect your contribution to their aid. From Raised money, We Provide them, Food, Education etc.</p>
-                    <Link href={'payment'}><button className="rounded-lg bg-green-300 px-6 py-3">Donate Now</button></Link>
+                    <Link href={'payment'}><button className="rounded-lg bg-green-300  dark:text-white px-6 py-3">Donate Now</button></Link>
                 </div>
 
                 {/* Image Section */}

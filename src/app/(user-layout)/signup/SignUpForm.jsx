@@ -81,7 +81,7 @@ const SignupForm = () => {
 					placeholder="name"
 					id="name"
 					name="name"
-					className="input input-bordered"
+					className="input input-bordered dark:text-black"
 					{...register("name", { required: true })}
 				/>
 				{errors.name && (
@@ -99,7 +99,7 @@ const SignupForm = () => {
 					placeholder="email"
 					id="email"
 					name="email"
-					className="input input-bordered"
+					className="input input-bordered dark:text-black"
 					autoComplete="email"
 					{...register("email", {
 						required: true,
@@ -121,7 +121,7 @@ const SignupForm = () => {
 					placeholder="password"
 					id="password"
 					name="password"
-					className="input input-bordered"
+					className="input input-bordered dark:text-black"
 					autoComplete="new-password"
 					{...register("password", { required: true, minLength: 6 })}
 				/>
@@ -140,7 +140,7 @@ const SignupForm = () => {
 					placeholder="Confirm Password"
 					id="confirmPassword"
 					name="confirmPassword"
-					className="input input-bordered"
+					className="input input-bordered dark:text-black"
 					autoComplete="new-password"
 					{...register("confirmPassword", {
 						required: true,

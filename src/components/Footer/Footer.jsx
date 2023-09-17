@@ -109,7 +109,7 @@ const Footer = () => {
 										type="email"
 										id="email"
 										name="email"
-										className="w-[80%] p-2 border rounded outline-none focus:border-emerald-600"
+										className="w-[80%] p-2 border rounded text-black outline-none focus:border-emerald-600"
 										placeholder="name@mail.com"
 										required
 									/>

@@ -56,7 +56,7 @@ const Misson = () => {
 						<h1 className="text-2xl font-extrabold mt-10">
 							Charity For Clean Water
 						</h1>
-						<p className="text-base text-gray-600 mt-3">
+						<p className="text-base text-gray-600 dark:text-slate-100 mt-3">
 							Clean water, a human right, is scarce, jeopardizing
 							health for millions. Join Charity for Clean Water to
 							transform lives by ensuring access and well-being.
@@ -82,7 +82,7 @@ const Misson = () => {
 						<h1 className="text-2xl font-extrabold mt-10">
 							Charity For Shelter
 						</h1>
-						<p className="text-base text-gray-600 mt-3">
+						<p className="text-base text-gray-600  dark:text-slate-100  mt-3">
 							Shelter provides safety, belonging, and fresh starts,
 							crucial for well-being. Our charity offers hope and
 							empowerment, transcending mere accommodation.
@@ -108,7 +108,7 @@ const Misson = () => {
 						<h1 className="text-2xl font-extrabold mt-10">
 							Charity For Health
 						</h1>
-						<p className="text-base text-gray-600 mt-3">
+						<p className="text-base text-gray-600  dark:text-slate-100  mt-3">
 							Charity for Health envisions a healthier world with
 							accessible quality healthcare for all. Join us to drive
 							positive change and make a lasting impact on well-being.
@@ -135,7 +135,7 @@ const Misson = () => {
 						<h1 className="text-2xl font-extrabold mt-10">
 							Charity For Food
 						</h1>
-						<p className="text-base text-gray-600 mt-3">
+						<p className="text-base text-gray-600  dark:text-slate-100  mt-3">
 							Charity for Food is dedicated to ending hunger and
 							ensuring no one sleeps hungry. Join us in providing
 							nourishment and hope to those in need.
@@ -161,7 +161,7 @@ const Misson = () => {
 						<h1 className="text-2xl font-extrabold mt-10">
 							Charity For Education
 						</h1>
-						<p className="text-base text-gray-600 mt-3">
+						<p className="text-base text-gray-600  dark:text-slate-100 mt-3">
 							Charity for Education Breaking povertys cycle, unlocking
 							potential through education. Invest in brighter futures
 							with us.
@@ -187,7 +187,7 @@ const Misson = () => {
 						<h1 className="text-2xl font-extrabold mt-10">
 							Charity For Cloth
 						</h1>
-						<p className="text-base text-gray-600 mt-3">
+						<p className="text-base text-gray-600  dark:text-slate-100  mt-3">
 							Clothing is not just protection; it is confidence.
 							Charity for Cloth empowers by providing attire,
 							restoring dignity to those vulnerable. Join us in

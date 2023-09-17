@@ -32,7 +32,7 @@ const historyPage = () => {
 				Donor History
 			</h2>
 			<div className="overflow-x-auto mt-8 mx-auto mb-52 md:mb-28 rounded-md">
-				<table className="mx-auto shadow-xl border w-[65%] table-auto bg-white overflow-hidden mb-10 rounded-lg">
+				<table className="mx-auto shadow-xl border w-[65%] table-auto bg-white dark:bg-black overflow-hidden mb-10 rounded-lg">
 					<thead>
 						<tr className="bg-blue-900 text-white">
 							<th className="px-6 py-3 text-left">SL</th>
@@ -52,13 +52,13 @@ const historyPage = () => {
 									index % 2 === 0 ? "bg-gray-100" : "bg-white"
 								}
 							>
-								<td className="px-6 py-4">{index + 1}</td>
-								<td className="px-6 py-4">{displayName}</td>
-								<td className="px-6 py-4">{email}</td>
-								<td className="px-6 py-4 text-emerald-600 font-semibold">
+								<td className="px-6 py-4 dark:text-black">{index + 1}</td>
+								<td className="px-6 py-4 dark:text-black">{displayName}</td>
+								<td className="px-6 py-4 dark:text-black">{email}</td>
+								<td className="px-6 py-4 dark:text-black font-semibold">
 									{donor.donationCategory}
 								</td>
-								<td className="px-6 py-4 text-emerald-600 font-semibold">
+								<td className="px-6 py-4 dark:text-black font-semibold">
 									{donor.donationAmount}
 								</td>
 							</tr>
