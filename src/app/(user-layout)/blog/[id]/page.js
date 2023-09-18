@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 
 
 
-const singleBlogs = (props) => {
+const SingleBlogsComponent = (props) => {
 
 
 
-  const [singleblogs, SetsingleBlogs] = useState(null);
+  const [SingleBlogs, SetSingleBlogs] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
 
@@ -22,7 +22,7 @@ const singleBlogs = (props) => {
     let itemData = await fetch(`/api/blogs/${item_Id}`);
     itemData = await itemData.json();
     let result = itemData.result
-    SetsingleBlogs(result);
+    SetSingleBlogs(result);
     console.log("donatorsingle",result)
     setIsLoading(false);
   }
@@ -49,22 +49,22 @@ const singleBlogs = (props) => {
                 className="rounded-xl"
                 height={400}
                 width={350}
-                src={singleblogs.imageUrl}
+                src={SingleBlogs.imageUrl}
                 alt="Pic nye"
               />
 
               <div>
-                <h1><span className="text-gray-400 font-extrabold">Name:</span> {singleblogs.name}</h1>
-                <h1><span className="text-gray-400 font-extrabold">Email:</span> {singleblogs.email}</h1>
-                <h1><span className="text-gray-400 font-extrabold">Designation:</span> {singleblogs.designation}</h1>
-                <h1><span className="text-gray-400 font-extrabold">Blood:</span> {singleblogs.blood}</h1>
-                <h1><span className="text-gray-400 font-extrabold">Contact:</span> {singleblogs.contact}</h1>
-                <h1><span className="text-gray-400 font-extrabold">Location:</span> {singleblogs.location}</h1>
+                <h1><span className="text-gray-400 font-extrabold">Name:</span> {SingleBlogs.name}</h1>
+                <h1><span className="text-gray-400 font-extrabold">Email:</span> {SingleBlogs.email}</h1>
+                <h1><span className="text-gray-400 font-extrabold">Designation:</span> {SingleBlogs.designation}</h1>
+                <h1><span className="text-gray-400 font-extrabold">Blood:</span> {SingleBlogs.blood}</h1>
+                <h1><span className="text-gray-400 font-extrabold">Contact:</span> {SingleBlogs.contact}</h1>
+                <h1><span className="text-gray-400 font-extrabold">Location:</span> {SingleBlogs.location}</h1>
               </div>
             </div>
             <div className="mt-3">
-              <h1><span className="text-gray-400 font-extrabold">Blog title:</span> {singleblogs.blog_title}</h1>
-              <h1><span className="text-gray-400 font-extrabold">Blog content:</span> {singleblogs.blog_content}</h1>
+              <h1><span className="text-gray-400 font-extrabold">Blog title:</span> {SingleBlogs.blog_title}</h1>
+              <h1><span className="text-gray-400 font-extrabold">Blog content:</span> {SingleBlogs.blog_content}</h1>
             </div>
 
           </div>
@@ -75,4 +75,4 @@ const singleBlogs = (props) => {
   );
 };
 
-export default singleBlogs;
+export default SingleBlogsComponent;
