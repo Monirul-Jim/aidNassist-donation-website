@@ -60,7 +60,7 @@ const DonatePayment = () => {
       <div className="mt-14 flex lg:flex-row md:flex-row flex-col  justify-center items-center gap-44">
         <div>
           <h1 className="text-3xl font-bold lg:max-w-lg">
-            New mothers and newborns urgently need your help
+            New mothers and newborns urgently need your help....
           </h1>
           <p className="font-semibold mt-2 lg:max-w-lg">
             Forced to give birth while fleeing conflict, new mothers and their
