@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 
 
 
-const SingleDonators = (props) => {
+const singleBlogs = (props) => {
 
 
 
-  const [sdonators, setSdonators] = useState(null);
+  const [singleblogs, SetsingleBlogs] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
 
@@ -19,19 +19,13 @@ const SingleDonators = (props) => {
 
   const getItemData = async () => {
     let item_Id = props.params.id
-    let itemData = await fetch(`/api/dblogs/${item_Id}`);
+    let itemData = await fetch(`/api/blogs/${item_Id}`);
     itemData = await itemData.json();
     let result = itemData.result
-    setSdonators(result);
+    SetsingleBlogs(result);
     console.log("donatorsingle",result)
     setIsLoading(false);
   }
-
-
-
-
-
-
   return (
     <div >
       {
@@ -55,50 +49,30 @@ const SingleDonators = (props) => {
                 className="rounded-xl"
                 height={400}
                 width={350}
-                src={sdonators.imageUrl}
+                src={singleblogs.imageUrl}
                 alt="Pic nye"
               />
 
               <div>
-                <h1><span className="text-gray-400 font-extrabold">Name:</span> {sdonators.name}</h1>
-                <h1><span className="text-gray-400 font-extrabold">Email:</span> {sdonators.email}</h1>
-                <h1><span className="text-gray-400 font-extrabold">Designation:</span> {sdonators.designation}</h1>
-                <h1><span className="text-gray-400 font-extrabold">Blood:</span> {sdonators.blood}</h1>
-                <h1><span className="text-gray-400 font-extrabold">Contact:</span> {sdonators.contact}</h1>
-                <h1><span className="text-gray-400 font-extrabold">Location:</span> {sdonators.location}</h1>
+                <h1><span className="text-gray-400 font-extrabold">Name:</span> {singleblogs.name}</h1>
+                <h1><span className="text-gray-400 font-extrabold">Email:</span> {singleblogs.email}</h1>
+                <h1><span className="text-gray-400 font-extrabold">Designation:</span> {singleblogs.designation}</h1>
+                <h1><span className="text-gray-400 font-extrabold">Blood:</span> {singleblogs.blood}</h1>
+                <h1><span className="text-gray-400 font-extrabold">Contact:</span> {singleblogs.contact}</h1>
+                <h1><span className="text-gray-400 font-extrabold">Location:</span> {singleblogs.location}</h1>
               </div>
             </div>
             <div className="mt-3">
-              <h1><span className="text-gray-400 font-extrabold">Blog title:</span> {sdonators.blog_title}</h1>
-              <h1><span className="text-gray-400 font-extrabold">Blog content:</span> {sdonators.blog_content}</h1>
+              <h1><span className="text-gray-400 font-extrabold">Blog title:</span> {singleblogs.blog_title}</h1>
+              <h1><span className="text-gray-400 font-extrabold">Blog content:</span> {singleblogs.blog_content}</h1>
             </div>
 
           </div>
-
-
-
-
         )
-
-
-
-
       }
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
   );
 };
 
-export default SingleDonators;
+export default singleBlogs;

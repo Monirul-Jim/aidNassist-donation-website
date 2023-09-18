@@ -44,7 +44,7 @@ const Feedback = () => {
 	}
 	return (
 		<div className='my-5'>
-			<h1 className='text-5xl font-serif text-gray-600 text-center mb-3'>=== Feedback ===</h1>
+			<h1 className='text-5xl font-serif text-gray-600 text-center mb-3'>Feedback</h1>
 			{/* Rating Starts ------------ */}
 			<div>
 				<div className='flex justify-center'><Rate rating={rating} onRating={(rate) => setRating(rate)} ></Rate>
