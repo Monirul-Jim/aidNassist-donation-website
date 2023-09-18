@@ -49,7 +49,7 @@ const SingleDonators = (props) => {
 
 
           <div>
-            <div className="lg:flex gap-10">
+            <div className="lg:flex md:flex md:gap-8 gap-10 lg:items-center md:items-center">
               <Image
                 className="rounded-xl"
                 height={400}

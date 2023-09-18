@@ -14,7 +14,7 @@ const Testimonial = () => {
         <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
             <h1 className='text-5xl font-serif text-gray-600 text-center my-3'>Testimonial</h1>
             <div className='bannersetup bg-fixed font-serif  h-fit w-full py-3'>
-                <div className='lg:grid lg:grid-cols-2'>
+                <div className='lg:grid lg:grid-cols-2 md:grid md:grid-cols-2 grid grid-cols-1'>
                     {/* 1st */}
                     <div className='pt-2 lg:pt-0'>
                         <div className="triangle absolute inset-0 opacity-40 z-10"><h1 className='relative z-20 text-black font-extrabold'>The donation options are diverse, and I

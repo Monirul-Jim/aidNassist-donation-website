@@ -41,7 +41,7 @@ const DBLOGS = () => {
                         </div>
                     </div>) : (
 
-                        <div className="lg:grid lg:grid-cols-3 lg:gap-5">
+                        <div className="lg:grid  lg:grid-cols-3 lg:gap-5 grid grid-cols-1 md:grid md:grid-cols-3 gap-4">
                             {
                                 users.map((blog) => (
 
