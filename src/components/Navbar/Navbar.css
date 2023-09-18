@@ -8,3 +8,6 @@
 	color: darkorange;
 	font-size: 1.5rem;
 }
+#google_translate_element span{
+	display: none;
+}

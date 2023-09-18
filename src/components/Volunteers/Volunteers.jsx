@@ -48,8 +48,8 @@ const Volunteers = () => {
 			<div data-aos="zoom-out-up"
 				
 				className="max-w-7xl mx-auto mt-1">
-				<h1 className="text-center pt-20 pb-6 text-5xl lg:max-w-4xl font-bold mx-auto">
-					Our Inspiring <span className="text-blue-800"> Volunteers</span>
+				<h1 className="text-center pt-20 pb-6 text-2xl md:text-4xl lg:max-w-4xl font-bold mx-auto">
+					Our Inspiring <span className="text-green-500"> Volunteers</span>
 				</h1>
 				<p className="text-center lg:max-w-4xl mx-auto text-xl mb-8">
 					We believe in the power of collective effort and community
@@ -76,7 +76,7 @@ const Volunteers = () => {
 					)
 						: (
 
-							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-5 mx-6">
+							<div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 mb-5">
 								{volunteers.map((volunteer) => (
 									<SingleVolunteer
 										key={volunteer._id}

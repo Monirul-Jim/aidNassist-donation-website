@@ -32,20 +32,20 @@ const Causes = () => {
 			>
 				<div className="mb-5">
 					<motion.h1
-						className="sm:text-4xl lg:d-done text-4xl lg:text-5xl font-bold pt-16"
+						className="sm:text-4xl lg:d-done text-2xl md:text-4xl font-bold pt-16"
 						initial={{ opacity: 0, x: -50 }}
 						animate={{ opacity: 1, x: 0 }}
 						exit={{ opacity: 0, x: -50 }}
 						transition={{ duration: 0.5, ease: "easeOut" }}
 					>
-						Recent <span className="text-blue-800">Causes</span>
+						Recent <span className="text-green-500">Causes</span>
 					</motion.h1>
 					<motion.p
 						initial={{ opacity: 0, x: -50 }}
 						animate={{ opacity: 1, x: 0 }}
 						exit={{ opacity: 0, x: -50 }}
 						transition={{ duration: 0.5, ease: "easeOut" }}
-						className="text-[20px] leading-7 max-w-[550px] pt-4 pb-6 me-auto"
+						className="text-lg leading-7 max-w-[550px] pt-4 pb-6 me-auto"
 					>
 						Actively involved in a variety of causes that address
 						pressing social and humanitarian issues
@@ -55,7 +55,7 @@ const Causes = () => {
 					<Link href="/causesdetails" className="nav-link">
 						<button
 							type="button"
-							className="focus:outline-none text-white bg-emerald-500 hover:bg-blue-800 focus:ring-4 focus:ring-purple-300 font-medium text-sm px-6 py-3 mb-2"
+							className="focus:outline-none text-white bg-green-400 hover:bg-green-500 focus:ring-4 focus:ring-purple-300 font-medium text-sm px-6 py-3 mb-2"
 						>
 							View Details
 						</button>
