@@ -4,6 +4,7 @@ import CountUp from "react-countup"
 import ScrollTrigger from 'react-scroll-trigger'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import './CountDown.css'
 const CountDown = () => {
 
     const [onTheCounter, setOnTheCounter] = useState(false);
@@ -83,49 +84,49 @@ const CountDown = () => {
 
     return (
         <ScrollTrigger onEnter={() => setOnTheCounter(true)} onExit={() => setOnTheCounter(false)}>
-            <div className="my-10"
+            <div className="mt-20 counter_section"
                 data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom"
             >
 
-                <div className="text-center text-4xl p-10 flex md:flex-row flex-col justify-center items-center gap-10">
-                    <div className="border rounded-xl p-8 bg-green-300">
-                        <h2><span className="text-2xl">Store Collection</span>
-                            <p className="mt-3">$
+                <div className="text-center container mx-auto flex md:flex-row flex-col justify-center items-center gap-6">
+                    <div className="border counter w-full border-blue-500 rounded-md py-5 bg-green-400">
+                        <h2><span className="text-xl  text-white">Store Collection</span>
+                            <p className="mt-3 text-4xl text-blue-600">$
                                 {onTheCounter && <CountUp start={0} end={TotalStorePayments} duration={2} delay={0}></CountUp>}
-                                +</p>
+                                <sup className="text-white text-3xl">+</sup></p>
                         </h2>
                     </div>
 
 
-                    <div className="border rounded-xl p-8 bg-green-300">
-                        <h2><span className="text-2xl">Payment Collection</span>
-                            <p className="mt-3">
+                    <div className="border counter w-full border-blue-500 rounded-md py-5 bg-green-400">
+                        <h2><span className="text-xl text-white">Payment Collection</span>
+                            <p className="mt-3 text-4xl text-blue-600">
                                 $
                                 {onTheCounter && <CountUp start={0} end={TotalStripePayments} duration={2} delay={0}></CountUp>}
-                                +</p>
+                                <sup className="text-white text-3xl">+</sup></p>
                         </h2>
                     </div>
 
-                    <div className="border rounded-xl p-8 bg-green-300">
-                        <h2><span className="text-2xl">Volunteers</span>
-                            <p className="mt-3">{onTheCounter && <CountUp start={0} end={volunteers.length} duration={2} delay={0}></CountUp>}
-                                +</p>
+                    <div className="border counter w-full border-blue-500 rounded-md py-5 bg-green-400">
+                        <h2><span className="text-xl text-white">Volunteers</span>
+                            <p className="mt-3 text-4xl text-blue-600">{onTheCounter && <CountUp start={0} end={volunteers.length} duration={2} delay={0}></CountUp>}
+                                <sup className="text-white text-3xl">+</sup></p>
                         </h2>
                     </div>
 
-                    <div className="border rounded-xl p-8 bg-green-300">
-                        <h2><span className="text-2xl">Launched Events</span>
-                            <p className="mt-3">{onTheCounter && <CountUp start={0} end={events.length} duration={2} delay={0}></CountUp>}
-                                +</p>
+                    <div className="border counter w-full border-blue-500 rounded-md py-5 bg-green-400">
+                        <h2><span className="text-xl text-white">Launched Events</span>
+                            <p className="mt-3 text-4xl text-blue-600">{onTheCounter && <CountUp start={0} end={events.length} duration={2} delay={0}></CountUp>}
+                                <sup className="text-white text-3xl">+</sup></p>
                         </h2>
                     </div>
 
-                    <div className="border rounded-xl p-8 bg-green-300">
-                        <h2><span className="text-2xl">Causes Collection</span>
-                            <p className="mt-3">$
+                    <div className="border counter w-full border-blue-500 rounded-md py-5 bg-green-400">
+                        <h2><span className="text-xl text-white">Causes Collection</span>
+                            <p className="mt-3 text-4xl text-blue-600">$
                                 {onTheCounter && <CountUp start={0} end={TotalDonationPayments} duration={2} delay={0}></CountUp>}
-                                +</p>
+                                <sup className="text-white text-3xl">+</sup></p>
                         </h2>
                     </div>
 

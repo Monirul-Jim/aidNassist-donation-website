@@ -11,13 +11,15 @@ const Testimonial = () => {
         Aos.init({ duration: 2700 });
     }, []);
     return (
-        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-            <h1 className='text-5xl font-serif text-gray-600 text-center my-3'>Testimonial</h1>
+        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className='mt-20'>
+            <h2 className="text-center pb-3 lg:pb-6 text-2xl md:text-4xl lg:max-w-4xl font-bold mx-auto">
+						Our <span className="text-blue-800">Testimonial</span>
+					</h2>
             <div className='bannersetup bg-fixed font-serif  h-fit w-full py-3'>
                 <div className='lg:grid lg:grid-cols-2 md:grid md:grid-cols-2 grid grid-cols-1'>
                     {/* 1st */}
                     <div className='pt-2 lg:pt-0'>
-                        <div className="triangle absolute inset-0 opacity-40 z-10"><h1 className='relative z-20 text-black font-extrabold'>The donation options are diverse, and I
+                        <div className="triangle absolute inset-0 text-center z-10"><h1 className='relative z-20 text-center text-black '>The donation options are diverse, and I
                             appreciate the transparency in showing how the
                             funds are used</h1></div>
                         <div className='flex justify-center items-center '>
@@ -27,7 +29,7 @@ const Testimonial = () => {
                     {/* 1st end */}
                     {/* 2nd */}
                     <div>
-                        <div className="triangle absolute inset-0 opacity-40 z-10"><h1 className='relative z-20 text-black font-extrabold'>The donation options are diverse, and I
+                        <div className="triangle absolute inset-0 text-center z-10"><h1 className='relative z-20 text-black'>The donation options are diverse, and I
                             appreciate the transparency in showing how the
                             funds are used</h1></div>
                         <div className='flex justify-center items-center '>
@@ -37,7 +39,7 @@ const Testimonial = () => {
                     {/* 2nd end */}
                     {/* 3rd */}
                     <div>
-                        <div className="triangle absolute inset-0 opacity-40 z-10"><h1 className='relative z-20 text-black font-extrabold'>The donation options are diverse, and I
+                        <div className="triangle absolute inset-0 text-center z-10"><h1 className='relative z-20 text-black'>The donation options are diverse, and I
                             appreciate the transparency in showing how the
                             funds are used</h1></div>
                         <div className='flex justify-center items-center '>
@@ -47,7 +49,7 @@ const Testimonial = () => {
                     {/* 3rd end */}
                     {/* 4th */}
                     <div>
-                        <div className="triangle absolute inset-0 opacity-40 z-10"><h1 className='relative z-20 text-black font-extrabold'>The donation options are diverse, and I
+                        <div className="triangle absolute inset-0 text-center z-10"><h1 className='relative z-20 text-black'>The donation options are diverse, and I
                             appreciate the transparency in showing how the
                             funds are used</h1></div>
                         <div className='flex justify-center items-center '>
@@ -61,7 +63,7 @@ const Testimonial = () => {
                 {/* 5th */}
                 <div className='lg:flex lg:justify-center pb-3 lg:pb-0'>
                     <div>
-                        <div className="triangle absolute inset-0 opacity-40 z-10"><h1 className='relative z-20 text-black font-extrabold'>The donation options are diverse, and I
+                        <div className="triangle absolute inset-0 text-center z-10"><h1 className='relative z-20 text-black'>The donation options are diverse, and I
                             appreciate the transparency in showing how the
                             funds are used</h1></div>
                         <div className='flex justify-center items-center '>

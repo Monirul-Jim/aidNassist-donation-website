@@ -45,9 +45,8 @@ const Volunteers = () => {
 
 
 	return (
-			<div data-aos="zoom-out-up"
-				
-				className="max-w-7xl mx-auto mt-1">
+			<>
+			<div data-aos="zoom-out-up" className="mt-1">
 				<h1 className="text-center pt-20 pb-6 text-2xl md:text-4xl lg:max-w-4xl font-bold mx-auto">
 					Our Inspiring <span className="text-green-500"> Volunteers</span>
 				</h1>
@@ -90,6 +89,7 @@ const Volunteers = () => {
 
 
 			</div>
+			</>
 	
 	);
 };

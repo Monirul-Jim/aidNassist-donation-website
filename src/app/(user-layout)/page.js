@@ -30,7 +30,7 @@ export default function Home() {
 			<Misson></Misson>
 			<LetsChange />
 			<BecomeVolunteer />
-			<Volunteers />
+			<Volunteers /> 
 			<Causes />
 			<CountDown/>
 			<Gallery></Gallery>
