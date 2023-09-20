@@ -28,10 +28,10 @@ export async function POST(request) {
             throw new Error("billing not found")
         }
         await StorePayments.updateOne({ tran_id }, { status: "success" })
-        return Response.redirect("https://test-another-next-proj.vercel.app/dashboard")
+        return Response.redirect("https://aid-nassist-donation-website.vercel.app/dashboard")
     } catch (error) {
         console.log(error.message);
-        return Response.redirect(`https://test-another-next-proj.vercel.app?error=${error.message}`);
+        return Response.redirect(`https://aid-nassist-donation-website.vercel.app?error=${error.message}`);
     }
 
 }
