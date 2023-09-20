@@ -29,7 +29,7 @@ const ViewTheFeedBack = () => {
 
 
     return (
-        <div className="lg:ms-40">
+        <div className="md:mx-auto ">
             <h1 className='text-center text-3xl my-5'>The Feedbacks</h1>
 
             <div>
@@ -43,7 +43,7 @@ const ViewTheFeedBack = () => {
                             <span className="sr-only">Loading...</span>
                         </div>
                     </div>) :
-                        <div className='lg:grid lg:grid-cols-2  gap-5'>
+                        <div className='md:grid md:grid-cols-1 lg:grid-cols-2 grid grid-cols-1 md:px-14 lg:px-14 md:ml-10  md:mr-14 gap-5'>
                             {
                                 userfeedback?.map(feed => (
                                     <Feeddelete key={feed._id} feed={feed}></Feeddelete>

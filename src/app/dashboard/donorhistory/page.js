@@ -31,8 +31,8 @@ const historyPage = () => {
 			<h2 className="text-3xl font-bold text-center mt-0 md:mt-10 pt-10 pb-5">
 				Donor History
 			</h2>
-			<div className="overflow-x-auto mt-8 mx-auto mb-52 md:mb-28 rounded-md">
-				<table className="mx-auto shadow-xl border w-[65%] table-auto bg-white dark:bg-black overflow-hidden mb-10 rounded-lg">
+			<div className="overflow-x-auto md:w-3/4 w-[80%] mt-8 mx-auto mb-52 md:mb-28 rounded-md">
+				<table className="mx-auto shadow-xl border w-full table-auto bg-white dark:bg-black overflow-hidden mb-10 rounded-lg">
 					<thead>
 						<tr className="bg-blue-900 text-white">
 							<th className="px-6 py-3 text-left">SL</th>

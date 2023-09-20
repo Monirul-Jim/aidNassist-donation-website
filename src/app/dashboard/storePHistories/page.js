@@ -4,7 +4,7 @@ import React from 'react';
 const StorePHistories = () => {
     return (
         <div>
-            <div className='mt-20'>
+            <div className='md:mt-20 lg:mt-20'>
                 <StorePHistory/>
 
             </div>
