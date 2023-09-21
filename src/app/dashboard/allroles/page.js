@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 
 const AllRolesPage = () => {
   const { user } = useAuth()
-  const [users, setUsers] = useState([])
+  const [datas, setDatas] = useState([])
 
   const getallusers = async () => {
     try {
@@ -17,7 +17,7 @@ const AllRolesPage = () => {
       }
       data = await data.json()
       let result = data.result
-      setUsers(result)
+      setDatas(result)
     } catch (error) {
       console.error('Error fetching data:', error)
     }
@@ -27,8 +27,8 @@ const AllRolesPage = () => {
     getallusers()
   }, [])
 
-  const handleDeleteUser = async () => {
-    let response = await fetch(`/api/users/${user?.email}`, {
+  const handleDeleteUser = async (_id) => {
+    let response = await fetch(`/api/users/specUser/${_id}`, {
       method: 'DELETE'
     })
     response = await response.json()
@@ -40,6 +40,8 @@ const AllRolesPage = () => {
         showConfirmButton: false,
         timer: 1500
       })
+      const remaining = datas.filter(data => data._id !== _id)
+      setDatas(remaining)
     }
   }
 
@@ -62,21 +64,21 @@ const AllRolesPage = () => {
               </tr>
             </thead>
             <tbody>
-              {users.map((user, index) => (
+              {datas.map((item, index) => (
                 <tr
-                  key={user._id}
+                  key={item._id}
                   className={index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}
                 >
                   <td className='px-6 py-4'>{index + 1}</td>
-                  <td className='px-6 py-4'>{user.name}</td>
-                  <td className='px-6 py-4'>{user.email}</td>
+                  <td className='px-6 py-4'>{item.name}</td>
+                  <td className='px-6 py-4'>{item.email}</td>
                   <td className='px-6 py-4 text-emerald-600 font-semibold'>
-                    {user.role}
+                    {item.role}
                   </td>
 
                   <button
                     className='rounded bg-red-400 mt-3 px-4 py-2 text-white font-semibold'
-                    onClick={handleDeleteUser}
+                    onClick={() => handleDeleteUser(item._id)}
                   >
                     <RiDeleteBin6Line className='text-xl' />
                   </button>
