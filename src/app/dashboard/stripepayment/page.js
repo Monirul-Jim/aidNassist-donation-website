@@ -17,7 +17,7 @@ const StorePHistory = () => {
     const getPaymentHistory = async () => {
 
 
-        let response = await fetch(`/api/sslmoneyfromdb/${user?.email}`);
+        let response = await fetch(`/api/stripemoney/${user?.email}`);
         let data = await response.json();
         let result = data.result;
         setPaymentHistory(result);
@@ -32,8 +32,8 @@ const StorePHistory = () => {
             `Index: ${index + 1}\n` +
             `Email: ${item.email}\n` +
             `Amount: $${(item.price / 100).toFixed(2)}\n` +
-            `Transaction ID: ${item.tran_id}\n` +
-            `Status: ${item.status}\n\n`
+            `Transaction ID: ${item.transactionId}\n` +
+            `Date: ${item.date}\n\n`
         ));
 
         const transactionData = formattedData.join('\n');
@@ -99,8 +99,8 @@ const StorePHistory = () => {
 
                                             <td className="py-3 text-xs md:text-base ">{item.email}</td>
                                             <td className="py-3 text-xs md:text-base ">${(item.price / 100).toFixed(2)}</td>
-                                            <td className="py-3 text-xs md:text-base hidden md:block ">{item.tran_id}</td>
-                                            <td className="py-3 text-xs text-right md:text-center md:text-base text-green-300">{item.status}</td>
+                                            <td className="py-3 text-xs md:text-base hidden md:block ">{item.transactionId}</td>
+                                            <td className="py-3 text-xs text-right md:text-center md:text-base text-green-300">{item.date}</td>
                                         </tr>
                                     ))}
                                 </tbody>
