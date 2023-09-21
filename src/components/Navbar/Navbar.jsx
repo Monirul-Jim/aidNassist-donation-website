@@ -75,9 +75,17 @@ const Navbar = () => {
 		}
 	}, [isOpen]);
 	const handleLogOut = async () => {
-		await logout();
-		toast.success("Successfully Logout!");
-	};
+        await logout();
+        const res = await fetch('/api/auth/logout', {
+            method: "POST"
+        });
+        const data = await res.json()
+        toast.success("Successfully Logout!");
+        if (path.includes('/dashboard')) {
+            replace("/")
+        }
+    };
+
 
 	const handleScroll = () => {
 		if (window.scrollY > 0) {

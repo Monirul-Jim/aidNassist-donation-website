@@ -58,6 +58,14 @@ const SignupForm = () => {
 				displayName: name,
 				photoURL: photo,
 			});
+			let result = await fetch("/api/users", {
+				method: "POST",
+				body: JSON.stringify({ name: name, email: email, photo: photo })
+			});
+			result = await result.json();
+			if (result.success) {
+				toast.success('Successfully Sign Up!')
+			}
 			startTransition(() => {
 				refresh();
 				replace(from);
@@ -68,6 +76,13 @@ const SignupForm = () => {
 			toast.dismiss(toastId);
 			toast.error(error.message || "User not signed in");
 		}
+
+
+
+
+
+
+
 	};
 
 	return (

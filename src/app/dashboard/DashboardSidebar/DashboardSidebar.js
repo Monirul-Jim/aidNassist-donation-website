@@ -185,47 +185,47 @@ const DashboardSidebar = () => {
                                 </ul>
                             </>
                         )
-                        : (
-                            <>
-                                <ul>
-                                    <h2 className=" flex gap-3 ml-3 text-blue-800 font-bold align-middle pb-2 items-center">
-                                        <RiAccountCircleLine className="text-2xl" />
-                                        User Dashboard
-                                    </h2>
+                            : (
+                                <>
+                                    <ul>
+                                        <h2 className=" flex gap-3 ml-3 text-blue-800 font-bold align-middle pb-2 items-center">
+                                            <RiAccountCircleLine className="text-2xl" />
+                                            User Dashboard
+                                        </h2>
 
-                                    <li>
-                                        <Link
-                                            href="/dashboard/userCart"
-                                            className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                                        >
-                                            <FaShoppingCart className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></FaShoppingCart>
-                                            <span className="flex-1 ml-3 whitespace-nowrap gap-4">
-                                                Cart
+                                        <li>
+                                            <Link
+                                                href="/dashboard/userCart"
+                                                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                                            >
+                                                <FaShoppingCart className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></FaShoppingCart>
+                                                <span className="flex-1 ml-3 whitespace-nowrap gap-4">
+                                                    Cart
 
-                                            </span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/dashboard/storePHistories" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                            <FaHistory className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaHistory>
-                                            <span className="flex-1 ml-3 whitespace-nowrap">Payment History</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/dashboard/donorhistory" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                            <FaHistory className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaHistory>
-                                            <span className="flex-1 ml-3 whitespace-nowrap">Donor History</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/dashboard/viewfeedback" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                            <FaIdCardAlt className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaIdCardAlt>
-                                            <span className="flex-1 ml-3 whitespace-nowrap">FeedBacks</span>
-                                        </Link>
-                                    </li>
+                                                </span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/dashboard/storePHistories" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                                <FaHistory className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaHistory>
+                                                <span className="flex-1 ml-3 whitespace-nowrap">Payment History</span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/dashboard/donorhistory" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                                <FaHistory className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaHistory>
+                                                <span className="flex-1 ml-3 whitespace-nowrap">Donor History</span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/dashboard/viewfeedback" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                                <FaIdCardAlt className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaIdCardAlt>
+                                                <span className="flex-1 ml-3 whitespace-nowrap">FeedBacks</span>
+                                            </Link>
+                                        </li>
 
 
-                                    {/* <li>
+                                        {/* <li>
 									<Link
 										href="/dashboard"
 										className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
@@ -234,7 +234,7 @@ const DashboardSidebar = () => {
 										<span className="ml-3">Home board</span>
 									</Link>
 								</li> */}
-                                    {/* <li>
+                                        {/* <li>
                                     <Link
                                         href="/dashboard/allroles"
                                         className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
@@ -245,20 +245,20 @@ const DashboardSidebar = () => {
                                         </span>
                                     </Link>
                                 </li> */}
-                                    <li>
-                                        <Link
-                                            href="/dashboard/selectedEvents"
-                                            className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                                        >
-                                            <MdEventAvailable className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></MdEventAvailable>
-                                            <span className="flex-1 ml-3 whitespace-nowrap">
-                                                Events
-                                            </span>
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </>
-                        )}
+                                        <li>
+                                            <Link
+                                                href="/dashboard/selectedEvents"
+                                                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                                            >
+                                                <MdEventAvailable className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></MdEventAvailable>
+                                                <span className="flex-1 ml-3 whitespace-nowrap">
+                                                    Events
+                                                </span>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </>
+                            )}
                     <div className=" bg-teal-500 rounded-2xl mt-10 h-[5px] mb-2"></div>
 
                     <ul>
@@ -279,9 +279,13 @@ const DashboardSidebar = () => {
                             >
                                 <FaSignOutAlt className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
                                 <span className="flex-1 ml-3 whitespace-nowrap">
-                                    Logout
+                                    <button onClick={handleLogOut} >
+
+                                        Logout
+                                    </button>
                                 </span>
                             </Link>
+
                         </li>
                     </ul>
                 </div>
