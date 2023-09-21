@@ -2,14 +2,13 @@ import React from 'react';
 
 const DonateTabMoney = ({ product, onPriceClick }) => {
   if (!product) {
-    return null; 
+    return null;
   }
 
   const { price } = product;
-  console.log(price);
 
   return (
-    <div className='py-4 px-8 mx-auto border border-slate-300'>
+    <div className='py-4 px-8  mx-auto border hover:bg-yellow-300 border-slate-300'>
       <button onClick={() => onPriceClick(price)}>
         $<span>{price}</span>
       </button>
