@@ -157,10 +157,31 @@ const DashboardSidebar = () => {
                                         </span>
                                     </Link>
                                 </li>
-                                <li className="mb-3 dark:text-white pt-6 lg:text-black text-semibold text-base flex gap-3 items-center">
-                                    <Link href="/dashboard/viewfeedback">
-                                        <FaIdCardAlt className="text-xl text-lime-700" />
+                                <li>
+                                    <Link
+                                        href="/dashboard/viewfeedback"
+                                        className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                                    >
+                                        <FaIdCardAlt className="text-xl mr-4 text-lime-700" />
                                         FeedBacks
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href="/dashboard/adminstripemoney"
+                                        className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                                    >
+                                        <FaIdCardAlt className="text-xl mr-4 text-lime-700" />
+                                        Admin Stripe Money
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href="/dashboard/adminsslmoney"
+                                        className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                                    >
+                                        <FaIdCardAlt className="text-xl mr-4 text-lime-700" />
+                                        Admin Ssl Commerz Money
                                     </Link>
                                 </li>
                             </ul>
