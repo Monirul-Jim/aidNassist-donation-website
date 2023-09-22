@@ -122,6 +122,7 @@ const Volunteers = () => {
 
 	useEffect(() => {
 		getallCauses()
+		Aos.init({ duration: 2200 });
 	}, []);
 	const getallCauses = async () => {
 		let data = await fetch("/api/volunteers");
