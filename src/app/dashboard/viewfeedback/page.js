@@ -1,8 +1,7 @@
 'use client';
-
-
 import Feeddelete from '@/components/FEEDDELETE/Feeddelete';
 import React, { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
 
 
 
@@ -20,17 +19,35 @@ const ViewTheFeedBack = () => {
         data = await data.json();
 
         let result = data.result
-        console.log("view feedback data", result)
         setfeedback(result);
         setLoading(false);
     };
 
 
 
+    const handleDeleteFeedback = async (id) => {
+        let response = await fetch(`/api/feedbacks/${id}`, {
+            method: "DELETE",
+        });
+        response = await response.json();
+        if (response.success) {
+            Swal.fire({
+                position: "top",
+                icon: "success",
+                title: "Deleted Successfully",
+                showConfirmButton: false,
+                timer: 1500,
+            });
+            const remaining = userfeedback.filter(cause => cause._id !== id)
+            setfeedback(remaining)
+        }
+
+    };
 
     return (
         <div className="md:mx-auto ">
             <h1 className='text-center text-3xl my-5'>The Feedbacks</h1>
+            <h1 className=' text-3xl mb-4 mt-5'>Total Feedback Length: {userfeedback.length}</h1>
 
             <div>
                 {
@@ -46,7 +63,9 @@ const ViewTheFeedBack = () => {
                         <div className='md:grid md:grid-cols-1 lg:grid-cols-2 grid grid-cols-1 md:px-14 lg:px-14 md:ml-10  md:mr-14 gap-5'>
                             {
                                 userfeedback?.map(feed => (
-                                    <Feeddelete key={feed._id} feed={feed}></Feeddelete>
+                                    <Feeddelete key={feed._id} feed={feed}
+                                        handleDeleteFeedback={handleDeleteFeedback}
+                                    ></Feeddelete>
                                 ))
                             }
                         </div>

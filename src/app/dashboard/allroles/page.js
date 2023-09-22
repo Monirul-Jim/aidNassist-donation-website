@@ -67,7 +67,7 @@ const AllRolesPage = () => {
               {datas.map((item, index) => (
                 <tr
                   key={item._id}
-                  className={index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}
+                  className='dark:bg-black'
                 >
                   <td className='px-6 py-4'>{index + 1}</td>
                   <td className='px-6 py-4'>{item.name}</td>
