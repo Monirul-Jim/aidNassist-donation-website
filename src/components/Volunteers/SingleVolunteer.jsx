@@ -89,21 +89,12 @@
 
 // export default SingleVolunteer;
 
-
-
-
-
-
-
-
-
-
 "use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaTrashAlt } from "react-icons/fa";
 
-const SingleVolunteer = ({ volunteer, handleDeleteVolunteer }) => {
+const SingleVolunteer = ({ volunteer }) => {
 	const {
 		_id,
 		name,
@@ -114,8 +105,6 @@ const SingleVolunteer = ({ volunteer, handleDeleteVolunteer }) => {
 		workPlace,
 		imageURL,
 	} = volunteer;
-
-
 
 	return (
 		<section className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden">
@@ -156,12 +145,12 @@ const SingleVolunteer = ({ volunteer, handleDeleteVolunteer }) => {
 							Edit
 						</button>
 					</Link>
-					<button
+					{/* <button
 						className="rounded bg-red-400 px-4 py-2 text-white font-semibold"
 						onClick={() => handleDeleteVolunteer(_id)}
 					>
 						<FaTrashAlt />
-					</button>
+					</button> */}
 				</div>
 			</div>
 		</section>

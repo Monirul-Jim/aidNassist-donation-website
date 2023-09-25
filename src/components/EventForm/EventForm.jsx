@@ -12,7 +12,7 @@ const EventForm = () => {
 	const onSubmit = (data) => {
 		console.log({ data });
 
-		fetch("api/events", {
+		fetch("/api/events", {
 			method: "POST",
 			headers: {
 				"content-type": "application/json",

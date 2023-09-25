@@ -130,7 +130,7 @@ const Volunteers = () => {
 		setVolunteers(result);
 	};
 
-	const handleDeleteVolunteer = async (id) => {
+/* 	const handleDeleteVolunteer = async (id) => {
 		let response = await fetch(`/api/volunteers/${id}`, {
 			method: "DELETE",
 		});
@@ -146,7 +146,7 @@ const Volunteers = () => {
 			const remaining = volunteers.filter(cause => cause._id !== id)
 			setVolunteers(remaining)
 		}
-	};
+	}; */
 	return (
 		<div data-aos="zoom-out-up" className="mt-1">
 			<h1 className="text-center pt-20 pb-6 text-2xl md:text-4xl lg:max-w-4xl font-bold mx-auto">
@@ -161,7 +161,7 @@ const Volunteers = () => {
 					<SingleVolunteer
 						key={volunteer._id}
 						volunteer={volunteer}
-						handleDeleteVolunteer={handleDeleteVolunteer}
+						// handleDeleteVolunteer={handleDeleteVolunteer}
 					></SingleVolunteer>
 				))}
 			</div>
