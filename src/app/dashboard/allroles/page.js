@@ -47,7 +47,7 @@ const AllRolesPage = () => {
 
   return (
     <section>
-      <h2 className='text-3xl font-bold text-center mt-0 md:mt-10 pt-10 pb-5'>
+      <h2 className='text-4xl font-bold text-center mt-0 md:mt-10 pt-10 pb-5'>
         Manage Users
       </h2>
       <div>
@@ -55,7 +55,7 @@ const AllRolesPage = () => {
           <table className='mx-auto shadow-xl border w-[65%] table-auto bg-white overflow-hidden mb-10 rounded-lg'>
             {/* Head */}
             <thead>
-              <tr className='bg-blue-900 text-white'>
+              <tr className='bg-green-300 text-black'>
                 <th className='px-6 py-3 text-left'>ID</th>
                 <th className='px-6 py-3 text-left'>Name</th>
                 <th className='px-6 py-3 text-left'>Email</th>

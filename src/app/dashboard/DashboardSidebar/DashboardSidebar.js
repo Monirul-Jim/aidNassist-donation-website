@@ -1,18 +1,19 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import {
     FaUserShield,
     FaIdCardAlt,
     FaUsers,
+    FaCcStripe,
+    FaMoneyBillAlt,
     FaShoppingCart,
     FaSignOutAlt,
     FaUserAlt,
     FaHistory,
 } from "react-icons/fa";
 import { RiAccountCircleLine, RiAddBoxFill } from "react-icons/ri";
-
 import { HiHome } from "react-icons/hi";
 import { MdEventAvailable, MdEventNote } from "react-icons/md";
 import { RiDashboard3Line } from "react-icons/ri";
@@ -21,11 +22,13 @@ import useAdmin from "@/hooks/useAdmin";
 import useDonor from "@/hooks/useDonor";
 import useAuth from "@/hooks/useAuth";
 import { usePathname, useRouter } from "next/navigation";
+
 import toast from "react-hot-toast";
 
 const DashboardSidebar = () => {
     const { user, logout } = useAuth();
     const { email, photoURL, displayName } = user || {};
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
 
     const [isAdmin, isAdminLoading] = useAdmin();
     const [isDonor, isDonorLoading] = useDonor();
@@ -67,6 +70,7 @@ const DashboardSidebar = () => {
             replace("/")
         }
     };
+    
 
     return (
         <div>
@@ -151,7 +155,7 @@ const DashboardSidebar = () => {
                                         href="/dashboard/allroles"
                                         className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                                     >
-                                        <MdEventNote className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></MdEventNote>
+                                        <MdEventNote className="text-2xl dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-lime-700"></MdEventNote>
                                         <span className="flex-1 ml-3 whitespace-nowrap">
                                             Manage Users
                                         </span>
@@ -171,7 +175,7 @@ const DashboardSidebar = () => {
                                         href="/dashboard/adminstripemoney"
                                         className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                                     >
-                                        <FaIdCardAlt className="text-xl mr-4 text-lime-700" />
+                                        <FaCcStripe className="text-xl mr-4 text-lime-700" />
                                         Admin Stripe Money
                                     </Link>
                                 </li>
@@ -180,7 +184,7 @@ const DashboardSidebar = () => {
                                         href="/dashboard/adminsslmoney"
                                         className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                                     >
-                                        <FaIdCardAlt className="text-xl mr-4 text-lime-700" />
+                                        <FaMoneyBillAlt className="text-xl mr-4 text-lime-700" />
                                         Admin Ssl Commerz Money
                                     </Link>
                                 </li>
@@ -219,7 +223,7 @@ const DashboardSidebar = () => {
                                                 href="/dashboard/userCart"
                                                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                                             >
-                                                <FaShoppingCart className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></FaShoppingCart>
+                                                <FaShoppingCart className="text-2xl text-lime-700 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></FaShoppingCart>
                                                 <span className="flex-1 ml-3 whitespace-nowrap gap-4">
                                                     Cart
 
@@ -228,56 +232,34 @@ const DashboardSidebar = () => {
                                         </li>
                                         <li>
                                             <Link href="/dashboard/storePHistories" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                                <FaHistory className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaHistory>
+                                                <FaMoneyBillAlt className='text-2xl dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-lime-700'></FaMoneyBillAlt>
                                                 <span className="flex-1 ml-3 whitespace-nowrap">Ssl Commerz Payment</span>
                                             </Link>
                                         </li>
                                         <li>
                                             <Link href="/dashboard/stripepayment" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                                <FaHistory className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaHistory>
+                                                <FaCcStripe className='text-2xl dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-lime-700'></FaCcStripe>
                                                 <span className="flex-1 ml-3 whitespace-nowrap">Stripe Payment</span>
                                             </Link>
                                         </li>
                                         <li>
                                             <Link href="/dashboard/donorhistory" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                                <FaHistory className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaHistory>
+                                                <FaHistory className='text-2xl text-lime-700 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaHistory>
                                                 <span className="flex-1 ml-3 whitespace-nowrap">Donor History</span>
                                             </Link>
                                         </li>
                                         <li>
                                             <Link href="/dashboard/viewfeedback" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                                <FaIdCardAlt className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaIdCardAlt>
+                                                <FaIdCardAlt className='text-2xl text-lime-700 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaIdCardAlt>
                                                 <span className="flex-1 ml-3 whitespace-nowrap">FeedBacks</span>
                                             </Link>
                                         </li>
-
-
-                                        {/* <li>
-									<Link
-										href="/dashboard"
-										className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-									>
-										<RiDashboard3Line className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></RiDashboard3Line>
-										<span className="ml-3">Home board</span>
-									</Link>
-								</li> */}
-                                        {/* <li>
-                                    <Link
-                                        href="/dashboard/allroles"
-                                        className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                                    >
-                                        <MdEventNote className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></MdEventNote>
-                                        <span className="flex-1 ml-3 whitespace-nowrap">
-                                            Manage Users
-                                        </span>
-                                    </Link>
-                                </li> */}
                                         <li>
                                             <Link
                                                 href="/dashboard/selectedEvents"
                                                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                                             >
-                                                <MdEventAvailable className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></MdEventAvailable>
+                                                <MdEventAvailable className="text-2xl text-lime-700 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></MdEventAvailable>
                                                 <span className="flex-1 ml-3 whitespace-nowrap">
                                                     Events
                                                 </span>
@@ -294,7 +276,7 @@ const DashboardSidebar = () => {
                                 href="/"
                                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                             >
-                                <HiHome className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
+                                <HiHome className="text-2xl text-lime-700 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
                                 <span className="flex-1 ml-3 whitespace-nowrap">
                                     Home
                                 </span>
@@ -304,10 +286,9 @@ const DashboardSidebar = () => {
                                 href="#"
                                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                             >
-                                <FaSignOutAlt className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
+                                <FaSignOutAlt className="text-2xl text-lime-700 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
                                 <span className="flex-1 ml-3 whitespace-nowrap">
                                     <button onClick={handleLogOut} >
-
                                         Logout
                                     </button>
                                 </span>
