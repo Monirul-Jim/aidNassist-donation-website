@@ -16,7 +16,7 @@ import {
 import { RiAccountCircleLine, RiAddBoxFill } from "react-icons/ri";
 import { HiHome } from "react-icons/hi";
 import { MdEventAvailable, MdEventNote } from "react-icons/md";
-import { RiDashboard3Line } from "react-icons/ri";
+import { BsFillPeopleFill } from "react-icons/bs";
 import { BiSolidDonateHeart } from "react-icons/bi";
 import useAdmin from "@/hooks/useAdmin";
 import useDonor from "@/hooks/useDonor";
@@ -34,8 +34,8 @@ const DashboardSidebar = () => {
     const [isDonor, isDonorLoading] = useDonor();
     const { replace } = useRouter()
     const path = usePathname();
-    console.log("hello admin", isAdmin)
-    console.log("hello Donor", isDonor)
+    // console.log("hello admin", isAdmin)
+    // console.log("hello Donor", isDonor)
 
     if (isAdminLoading) {
         return <div className="text-center">
@@ -226,6 +226,18 @@ const DashboardSidebar = () => {
                                                 <FaShoppingCart className="text-2xl text-lime-700 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></FaShoppingCart>
                                                 <span className="flex-1 ml-3 whitespace-nowrap gap-4">
                                                     Cart
+
+                                                </span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href="/dashboard/volunteeredit"
+                                                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                                            >
+                                                <BsFillPeopleFill className="text-2xl text-lime-700 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></BsFillPeopleFill>
+                                                <span className="flex-1 ml-3 whitespace-nowrap gap-4">
+                                                    Volunteer
 
                                                 </span>
                                             </Link>
