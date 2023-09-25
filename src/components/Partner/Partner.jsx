@@ -21,62 +21,62 @@ const Partner = () => {
 			<Marquee behavior="" direction="">
 				<div className="mb-10">
 					<Image
-						width={300}
+						width={250}
 						height={200}
 						src="/partner/1.png"
 						alt="img1"
 						style={{ background: "transparent" }}
-						className="w-[150px] h-[70px] lg:w-[300px] lg:h-[150px]"
+						className="w-[150px] h-[70px] lg:w-[300px] lg:h-[120px]"
 					/>
 				</div>
 				<div className="mb-10">
 					<Image
-						width={300}
+						width={250}
 						height={200}
 						src="/partner/2.png"
 						alt="img2"
 						style={{ background: "transparent" }}
-						className="w-[150px] h-[70px] lg:w-[300px] lg:h-[150px]"
+						className="w-[150px] h-[70px] lg:w-[300px] lg:h-[120px]"
 					/>
 				</div>
 				<div className="mb-10">
 					<Image
-						width={300}
+						width={250}
 						height={200}
 						src="/partner/3.png"
 						alt="img3"
 						style={{ background: "transparent" }}
-						className="w-[150px] h-[70px] lg:w-[300px] lg:h-[150px]"
+						className="w-[150px] h-[70px] lg:w-[300px] lg:h-[120px]"
 					/>
 				</div>
 				<div className="mb-10">
 					<Image
-						width={300}
+						width={250}
 						height={200}
 						src="/partner/4.png"
 						alt="img4"
 						style={{ background: "transparent" }}
-						className="w-[150px] h-[70px] lg:w-[300px] lg:h-[150px]"
+						className="w-[150px] h-[70px] lg:w-[300px] lg:h-[120px]"
 					/>
 				</div>
 				<div className="mb-10">
 					<Image
-						width={300}
+						width={250}
 						height={200}
 						src="/partner/1.png"
 						alt="img5"
 						style={{ background: "transparent" }}
-						className="w-[150px] h-[70px] lg:w-[300px] lg:h-[150px]"
+						className="w-[150px] h-[70px] lg:w-[300px] lg:h-[120px]"
 					/>
 				</div>
 				<div className="mb-10">
 					<Image
-						width={300}
+						width={250}
 						height={200}
 						src="/partner/2.png"
 						alt="img6"
 						style={{ background: "transparent" }}
-						className="w-[150px] h-[70px] lg:w-[300px] lg:h-[150px]"
+						className="w-[150px] h-[70px] lg:w-[300px] lg:h-[120px]"
 					/>
 				</div>
 			</Marquee>

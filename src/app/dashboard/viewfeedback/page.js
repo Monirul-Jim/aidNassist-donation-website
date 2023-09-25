@@ -3,27 +3,19 @@ import Feeddelete from '@/components/FEEDDELETE/Feeddelete';
 import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 
-
-
 const ViewTheFeedBack = () => {
-
     const [userfeedback, setfeedback] = useState([]);
     const [loading, setLoading] = useState(true);
-
     useEffect(() => {
         getallfeedbacks()
     }, []);
-
     const getallfeedbacks = async () => {
         let data = await fetch("/api/feedbacks");
         data = await data.json();
-
         let result = data.result
         setfeedback(result);
         setLoading(false);
     };
-
-
 
     const handleDeleteFeedback = async (id) => {
         let response = await fetch(`/api/feedbacks/${id}`, {
@@ -45,11 +37,11 @@ const ViewTheFeedBack = () => {
     };
 
     return (
-        <div className="md:mx-auto ">
-            <h1 className='text-center text-3xl my-5'>The Feedbacks</h1>
-            <h1 className=' text-3xl mb-4 mt-5'>Total Feedback Length: {userfeedback.length}</h1>
+        <div className="md:mx-auto">
+            <h1 className='text-4xl font-extrabold text-center mt-0 pt-4 pb-12'>The Feedbacks</h1>
+            <h1 className=' text-2xl font-extrabold mb-8 mt-2 ml-0 md:ml-12'>Total Feedback Length: {userfeedback.length}</h1>
 
-            <div>
+            <div className='w-[80%] mx-auto'>
                 {
                     loading ? (<div className="text-center">
                         <div role="status">
@@ -60,7 +52,7 @@ const ViewTheFeedBack = () => {
                             <span className="sr-only">Loading...</span>
                         </div>
                     </div>) :
-                        <div className='md:grid md:grid-cols-1 lg:grid-cols-2 grid grid-cols-1 md:px-14 lg:px-14 md:ml-10  md:mr-14 gap-5'>
+                        <div className='md:grid md:grid-cols-1 lg:grid-cols-2 grid grid-cols-1 md:px-14 lg:px-14 md:ml-10 md:mr-14 gap-5'>
                             {
                                 userfeedback?.map(feed => (
                                     <Feeddelete key={feed._id} feed={feed}
@@ -69,9 +61,7 @@ const ViewTheFeedBack = () => {
                                 ))
                             }
                         </div>
-
                 }
-
             </div>
         </div>
     );
