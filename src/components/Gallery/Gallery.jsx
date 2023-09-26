@@ -9,28 +9,26 @@ import ImageSix from "../../../public/Gallery/gallery-6.jpg";
 import ImageSeven from "../../../public/Gallery/gallery-7.jpg";
 import ImageEight from "../../../public/Gallery/gallery-8.jpg";
 import Image from "next/image";
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const Gallery = () => {
-
-
 	useEffect(() => {
 		Aos.init({ duration: 2500 });
 	}, []);
-
-
-
-
 	return (
 		<>
 			<section>
-				<div className="container mx-auto mt-20" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-					<h2 className="text-center pb-3 lg:pb-6 text-3xl lg:text-5xl lg:max-w-4xl font-bold mx-auto">
+				<div
+					className="container mx-auto mt-20"
+					data-aos="fade-up"
+					data-aos-anchor-placement="bottom-bottom"
+				>
+					<h2 className="text-center pb-3 lg:pb-6 text-2xl md:text-4xl lg:max-w-4xl font-bold mx-auto">
 						Our <span className="text-blue-800">Gallery</span>
 					</h2>
-					<p className="text-center lg:max-w-2xl mx-auto text-lg lg:text-xl mb-4 lg:mb-16">
+					<p className="text-center lg:max-w-2xl mx-auto text-lg lg:text-xl mb-4 md:mb-10">
 						Enhance the functionality and design of the gallery
 						based on your specific requirements and design
 						preferences.

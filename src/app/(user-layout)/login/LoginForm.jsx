@@ -24,8 +24,8 @@ const LoginForm = () => {
 
 	const [showPassword, setShowPassword] = useState(false);
 	const handleCheckboxChange = () => {
-        setShowPassword(!showPassword);
-    };
+		setShowPassword(!showPassword);
+	};
 
 	const onSubmit = async (data) => {
 		const { email, password } = data;
@@ -86,40 +86,40 @@ const LoginForm = () => {
 						Please enter a password.
 					</span>
 				)}
-				<label className="label">
-					<a href="#" className="label-text-alt link link-hover">
-						Forgot Password?
-					</a>
-				</label>
+				
 			</div>
 
 			<div className="form-control">
-					<label className="label cursor-pointer">
-						<span className="label-text mr-72">Show Password</span>
-						<input onChange={handleCheckboxChange} type="checkbox" checked={showPassword} className="checkbox checkbox-primary" />
-					</label>
-				</div>
-
-
-
-
-
-
-
+				<label className="label cursor-pointer">
+					<span className="label-text mr-72">Show Password</span>
+					<input
+						onChange={handleCheckboxChange}
+						type="checkbox"
+						checked={showPassword}
+						className="checkbox checkbox-primary"
+					/>
+				</label>
+			</div>
 
 			<div className="form-control mt-6">
-				<button className="btn btn-[#059669]" type="submit">
+				<button className="btn btn-[#059669] w-full" type="submit">
 					Login
 				</button>
 			</div>
 			<p className="mt-3">
 				Don&apos;t have an account?
-				<Link className="text-emerald-600 font-bold ml-1" href="/signup">
+				<Link
+					className="text-emerald-600 font-bold ml-1"
+					href="/signup"
+				>
 					Signup
 				</Link>
 			</p>
-			<div className="divider mt-5">OR</div>
-			<GoogleLogin className="justify-center mx-auto w-full items-center" from={from} />
+			<div className="divider mt-3">OR</div>
+			<GoogleLogin
+				className="justify-center mx-auto w-full items-center"
+				from={from}
+			/>
 		</form>
 	);
 };

@@ -13,4 +13,8 @@ export async function GET() {
     console.log(data);
 
     return NextResponse.json({ result: data, success: true })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cf19016bb48ec16876bfb0354f0843d756f37d2d

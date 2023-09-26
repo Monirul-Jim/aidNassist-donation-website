@@ -22,7 +22,7 @@ export const metadata = {
 
 export default function Home() {
 	return (
-		<div>
+		<div className="overflow-x-hidden overflow-y-hidden">
 			{/* here all function give here */}
 			<TextToSpeech text={"Welcome to AidNassits"}></TextToSpeech>
 			<HomeSlider></HomeSlider>
@@ -30,7 +30,7 @@ export default function Home() {
 			<Misson></Misson>
 			<LetsChange />
 			<BecomeVolunteer />
-			<Volunteers />
+			<Volunteers /> 
 			<Causes />
 			<CountDown/>
 			<Gallery></Gallery>

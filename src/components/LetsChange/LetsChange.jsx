@@ -26,8 +26,8 @@ const LetsChange = () => {
     return (
         <div data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom">
-            <h1 className='text-2xl text-center dark:text-white '>Lets make a change together</h1>
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-12'>
+            <h1 className='text-center lg:max-w-4xl mx-auto text-2xl md:text-4xl font-bold mb-5'>Lets make a change together</h1>
+            <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 mt-10'>
                 {
                     causes && causes.map(category => <LetsChangeCard key={category._id} category={category} ></LetsChangeCard>)
                 }

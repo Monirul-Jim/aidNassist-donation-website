@@ -29,21 +29,21 @@ const Misson = () => {
 				data-aos="fade-up"
 				data-aos-anchor-placement="bottom-bottom"
 			>
-				<h1 className="text-center lg:max-w-4xl mx-auto text-4xl font-bold mb-8">
+				<h1 className="text-center lg:max-w-4xl mx-auto text-2xl md:text-4xl font-bold mb-5">
 					Welcome to AidNAssist, a nationwide charitable, non-profit
 					organization
 				</h1>
-				<p className="text-center lg:max-w-2xl mx-auto text-xl mb-8">
+				<p className="text-center lg:max-w-2xl mx-auto mb-10">
 					We believe in the power of collective effort and community
 					involvement.
 				</p>
 			</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl gap-10 justify-center items-center pt-8 pb-16 mt-6 mx-auto">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container gap-10 justify-between items-center pt-8 pb-16 mt-10 mx-auto">
 				{/* card 1 start */}
 				<div data-aos="flip-left">
 
 
-					<div className="relative w-[370px] h-[240px] rounded-lg text-center border border-emerald-500 transition-transform transform hover:-translate-x-3 hover:-translate-y-3 p-4 mx-auto">
+					<div className="relative w-full h-[240px] mb-10  rounded-lg text-center border border-emerald-500 transition-transform transform hover:-translate-x-3 hover:-translate-y-3 hover:bg-green-100 duration-500 p-4 mx-auto">
 						<div className="absolute bg-emerald-400 w-14 h-14 -top-8 left-1/2 transform -translate-x-1/2 flex items-center justify-center rounded-lg">
 							<Image
 								className="w-10 h-10"
@@ -53,7 +53,7 @@ const Misson = () => {
 								alt="img"
 							/>
 						</div>
-						<h1 className="text-2xl font-extrabold mt-10">
+						<h1 className="text-xl font-semibold mt-10">
 							Charity For Clean Water
 						</h1>
 						<p className="text-base text-gray-600 dark:text-slate-100 mt-3">
@@ -69,7 +69,7 @@ const Misson = () => {
 				<div data-aos="flip-up">
 
 
-					<div className="relative w-[370px] h-[240px] rounded-lg text-center border border-emerald-500 transition-transform transform hover:-translate-x-3 hover:-translate-y-3 p-4 mx-auto">
+					<div className="relative  h-[240px] mb-10 w-full duration-500 hover:bg-green-100 rounded-lg text-center border border-emerald-500 transition-transform transform hover:-translate-x-3 hover:-translate-y-3 p-4 mx-auto">
 						<div className="absolute bg-emerald-400 w-14 h-14 -top-8 left-1/2 transform -translate-x-1/2 flex items-center justify-center rounded-lg">
 							<Image
 								className="w-10 h-10"
@@ -79,7 +79,7 @@ const Misson = () => {
 								alt="img"
 							/>
 						</div>
-						<h1 className="text-2xl font-extrabold mt-10">
+						<h1 className="text-xl font-semibold mt-10">
 							Charity For Shelter
 						</h1>
 						<p className="text-base text-gray-600  dark:text-slate-100  mt-3">
@@ -95,7 +95,7 @@ const Misson = () => {
 				<div data-aos="flip-right">
 
 
-					<div className="relative w-[370px] h-[240px] rounded-lg text-center border border-emerald-500 transition-transform transform hover:-translate-x-3 hover:-translate-y-3 p-4 mx-auto">
+					<div className="relative  h-[240px] mb-10 w-full duration-500 hover:bg-green-100 rounded-lg text-center border border-emerald-500 transition-transform transform hover:-translate-x-3 hover:-translate-y-3 p-4 mx-auto">
 						<div className="absolute bg-emerald-400 w-14 h-14 -top-8 left-1/2 transform -translate-x-1/2 flex items-center justify-center rounded-lg">
 							<Image
 								className="w-10 h-10"
@@ -105,7 +105,7 @@ const Misson = () => {
 								alt="img"
 							/>
 						</div>
-						<h1 className="text-2xl font-extrabold mt-10">
+						<h1 className="text-xl font-semibold mt-10">
 							Charity For Health
 						</h1>
 						<p className="text-base text-gray-600  dark:text-slate-100  mt-3">
@@ -122,7 +122,7 @@ const Misson = () => {
 				<div data-aos="flip-right">
 
 
-					<div className="relative w-[370px] h-[240px] rounded-lg text-center border border-emerald-500 transition-transform transform hover:-translate-x-3 hover:-translate-y-3 p-4 mx-auto">
+					<div className="relative  h-[240px] mb-10 w-full duration-500 hover:bg-green-100 rounded-lg text-center border border-emerald-500 transition-transform transform hover:-translate-x-3 hover:-translate-y-3 p-4 mx-auto">
 						<div className="absolute bg-emerald-400 w-14 h-14 -top-8 left-1/2 transform -translate-x-1/2 flex items-center justify-center rounded-lg">
 							<Image
 								className="w-10 h-10"
@@ -132,7 +132,7 @@ const Misson = () => {
 								alt="img"
 							/>
 						</div>
-						<h1 className="text-2xl font-extrabold mt-10">
+						<h1 className="text-xl font-semibold mt-10">
 							Charity For Food
 						</h1>
 						<p className="text-base text-gray-600  dark:text-slate-100  mt-3">
@@ -148,7 +148,7 @@ const Misson = () => {
 				<div data-aos="flip-down">
 
 
-					<div className="relative w-[370px] h-[240px] rounded-lg text-center border border-emerald-500 transition-transform transform hover:-translate-x-3 hover:-translate-y-3 p-4 mx-auto">
+					<div className="relative  h-[240px] mb-10 w-full duration-500 hover:bg-green-100 rounded-lg text-center border border-emerald-500 transition-transform transform hover:-translate-x-3 hover:-translate-y-3 p-4 mx-auto">
 						<div className="absolute bg-emerald-400 w-14 h-14 -top-8 left-1/2 transform -translate-x-1/2 flex items-center justify-center rounded-lg">
 							<Image
 								className="w-10 h-10"
@@ -158,7 +158,7 @@ const Misson = () => {
 								alt="img"
 							/>
 						</div>
-						<h1 className="text-2xl font-extrabold mt-10">
+						<h1 className="text-xl font-semibold mt-10">
 							Charity For Education
 						</h1>
 						<p className="text-base text-gray-600  dark:text-slate-100 mt-3">
@@ -174,7 +174,7 @@ const Misson = () => {
 				<div data-aos="flip-left">
 
 
-					<div className="relative w-[370px] h-[240px] rounded-lg text-center border border-emerald-500 transition-transform transform hover:-translate-x-3 hover:-translate-y-3 p-4 mx-auto">
+					<div className="relative  h-[240px] mb-10 w-full duration-500 hover:bg-green-100 rounded-lg text-center border border-emerald-500 transition-transform transform hover:-translate-x-3 hover:-translate-y-3 p-4 mx-auto">
 						<div className="absolute bg-emerald-400 w-14 h-14 -top-8 left-1/2 transform -translate-x-1/2 flex items-center justify-center rounded-lg">
 							<Image
 								className="w-10 h-10"
@@ -184,7 +184,7 @@ const Misson = () => {
 								alt="img"
 							/>
 						</div>
-						<h1 className="text-2xl font-extrabold mt-10">
+						<h1 className="text-xl font-semibold mt-10">
 							Charity For Cloth
 						</h1>
 						<p className="text-base text-gray-600  dark:text-slate-100  mt-3">

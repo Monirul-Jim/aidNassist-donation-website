@@ -9,13 +9,13 @@ const LetsChangeCard = ({ category }) => {
     const { image, title, description, _id } = category
     return (
 
-        <div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a>
                 <Image width={900} height={300} className="rounded-t-lg h-[255px]" src={image} alt="" />
             </a>
-            <div className="p-5">
+            <div className="p-6">
                 <a href="#">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+                    <h5 className="text-xl font-semibold mt-10mb-2 tracking-tight text-gray-900 dark:text-white">{title}</h5>
                 </a>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
                 <Link href={`getssldata/${_id}`}>

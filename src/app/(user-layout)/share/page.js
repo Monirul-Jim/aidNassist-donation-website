@@ -49,7 +49,7 @@ import {
 
 export default class App extends Component {
   render() {
-    const shareUrl = 'https://test-another-next-proj.vercel.app/';
+    const shareUrl = 'https://aid-nassist-donation-website.vercel.app/';
     return (
       <div
         style={{

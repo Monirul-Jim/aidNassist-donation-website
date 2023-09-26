@@ -1,0 +1,37 @@
+.counter_section{
+    background: url("../../../public/about/Banner.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+}
+.counter_section::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(169, 227, 169, .5);
+    z-index: -1;
+}
+.counter{
+    transition: .5s linear;
+}
+.counter:hover{
+    background-color: #1C64F2;
+    
+}
+.counter p{
+    transition: .5s linear;
+}
+.counter sup{
+    transition: .5s linear;
+}
+.counter:hover p{
+    color: #fff;
+}
+
+.counter:hover sup{
+    color: #1bd99a;
+}

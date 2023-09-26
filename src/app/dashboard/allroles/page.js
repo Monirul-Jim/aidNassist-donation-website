@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 
 const AllRolesPage = () => {
   const { user } = useAuth()
-  const [users, setUsers] = useState([])
+  const [datas, setDatas] = useState([])
 
   const getallusers = async () => {
     try {
@@ -17,7 +17,7 @@ const AllRolesPage = () => {
       }
       data = await data.json()
       let result = data.result
-      setUsers(result)
+      setDatas(result)
     } catch (error) {
       console.error('Error fetching data:', error)
     }
@@ -27,8 +27,8 @@ const AllRolesPage = () => {
     getallusers()
   }, [])
 
-  const handleDeleteUser = async () => {
-    let response = await fetch(`/api/users/${user?.email}`, {
+  const handleDeleteUser = async (_id) => {
+    let response = await fetch(`/api/users/specUser/${_id}`, {
       method: 'DELETE'
     })
     response = await response.json()
@@ -40,12 +40,14 @@ const AllRolesPage = () => {
         showConfirmButton: false,
         timer: 1500
       })
+      const remaining = datas.filter(data => data._id !== _id)
+      setDatas(remaining)
     }
   }
 
   return (
     <section>
-      <h2 className='text-3xl font-bold text-center mt-0 md:mt-10 pt-10 pb-5'>
+      <h2 className='text-4xl font-bold text-center mt-0 md:mt-10 pt-10 pb-5'>
         Manage Users
       </h2>
       <div>
@@ -53,7 +55,7 @@ const AllRolesPage = () => {
           <table className='mx-auto shadow-xl border w-[65%] table-auto bg-white overflow-hidden mb-10 rounded-lg'>
             {/* Head */}
             <thead>
-              <tr className='bg-blue-900 text-white'>
+              <tr className='bg-green-300 text-black'>
                 <th className='px-6 py-3 text-left'>ID</th>
                 <th className='px-6 py-3 text-left'>Name</th>
                 <th className='px-6 py-3 text-left'>Email</th>
@@ -62,21 +64,21 @@ const AllRolesPage = () => {
               </tr>
             </thead>
             <tbody>
-              {users.map((user, index) => (
+              {datas.map((item, index) => (
                 <tr
-                  key={user._id}
-                  className={index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}
+                  key={item._id}
+                  className='dark:bg-black'
                 >
                   <td className='px-6 py-4'>{index + 1}</td>
-                  <td className='px-6 py-4'>{user.name}</td>
-                  <td className='px-6 py-4'>{user.email}</td>
+                  <td className='px-6 py-4'>{item.name}</td>
+                  <td className='px-6 py-4'>{item.email}</td>
                   <td className='px-6 py-4 text-emerald-600 font-semibold'>
-                    {user.role}
+                    {item.role}
                   </td>
 
                   <button
                     className='rounded bg-red-400 mt-3 px-4 py-2 text-white font-semibold'
-                    onClick={handleDeleteUser}
+                    onClick={() => handleDeleteUser(item._id)}
                   >
                     <RiDeleteBin6Line className='text-xl' />
                   </button>
